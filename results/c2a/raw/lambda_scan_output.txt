@@ -1,0 +1,8 @@
+kappa_U(m, Lambda) = Lambda**4*(-17*Lambda**6 - 85*Lambda**4*m**2 - 170*Lambda**2*m**4 - 90*m**6)/(1152*pi**2*(Lambda**10 + 5*Lambda**8*m**2 + 10*Lambda**6*m**4 + 10*Lambda**4*m**6 + 5*Lambda**2*m**8 + m**10))
+kappa_U(m->0, Lambda) = -17/(1152*pi**2)
+kappa_U(m->0, Lambda->oo) = -17/(1152*pi**2) = -0.0014951910780553316
+  Lambda=1: kappa_U(m=0.15)=-0.0014951
+  Lambda=2: kappa_U(m=0.15)=-0.0014952
+  Lambda=4: kappa_U(m=0.15)=-0.0014952
+  Lambda=8: kappa_U(m=0.15)=-0.0014952
+  Lambda=100: kappa_U(m=0.15)=-0.0014952

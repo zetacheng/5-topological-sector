@@ -1,0 +1,26 @@
+=== CLOSED-FORM kappa_U  (region=ball) ===
+  BOX       A4(cfgA)=(-42*m**6 - 50*m**4 - 25*m**2 - 5)/(24*pi**2*m**4*(m**10 + 5*m**8 + 10*m**6 + 10*m**4 + 5*m**2 + 1))   [41.7s]
+  TRIANGLE  A4(cfgA)=(14*m**6 + 10*m**4 + 5*m**2 + 1)/(12*pi**2*m**4*(m**10 + 5*m**8 + 10*m**6 + 10*m**4 + 5*m**2 + 1))   [3.5s]
+  BUBBLE    A4(cfgA)=0   [0.0s]
+  SUNSET    A4(cfgA)=(-6*m**4 - 4*m**2 - 1)/(36*pi**2*m**4*(m**8 + 4*m**6 + 6*m**4 + 4*m**2 + 1))   [1.6s]
+  CONTACT   A4(cfgA)=0   [0.0s]
+
+  kappa_raw(m) = (-90*m**6 - 170*m**4 - 85*m**2 - 17)/(1152*pi**2*m**4*(m**10 + 5*m**8 + 10*m**6 + 10*m**4 + 5*m**2 + 1))
+  kappa_U(m) [exact, ball Lambda=1] = (-90*m**6 - 170*m**4 - 85*m**2 - 17)/(1152*pi**2*m**10 + 5760*pi**2*m**8 + 11520*pi**2*m**6 + 11520*pi**2*m**4 + 5760*pi**2*m**2 + 1152*pi**2)
+  d(kappa_U)/dm = 5*m**5*(3*m**2 + 4)/(48*pi**2*(m**12 + 6*m**10 + 15*m**8 + 20*m**6 + 15*m**4 + 6*m**2 + 1))
+  kappa_U(m->0) = -17/(1152*pi**2) = -17/1152/pi^2 = -0.00149519
+  small-m expansion: kappa_U = 5*m**6/(72*pi**2) - 17/(1152*pi**2)
+    -> the m^2 and m^4 terms CANCEL; residual is O(m^6) (finite-cutoff artifact)
+  kappa_U * 32 pi^2 (m->0) = -17/36  (rational multiple of 1/pi^2, as expected)
+
+  SIGN (read off analytically): kappa_U < 0  -- every numerator coefficient
+       is negative and the denominator is positive-definite => NEGATIVE.
+
+  per-mass comparison vs production (scan_data.csv):
+    m=0.08: closed-form=-0.0014952  production=-0.0014900  dev=0.35%
+    m=0.12: closed-form=-0.0014952  production=-0.0014910  dev=0.28%
+    m=0.15: closed-form=-0.0014951  production=-0.0014910  dev=0.28%
+    m=0.2: closed-form=-0.0014948  production=-0.0014910  dev=0.26%
+    m=0.3: closed-form=-0.0014915  production=-0.0014870  dev=0.30%
+
+  DELIVERABLE: kappa_U = -17/(1152 pi^2) = -0.00149519 (SIGN NEGATIVE); production -0.001490(9); agree within band.

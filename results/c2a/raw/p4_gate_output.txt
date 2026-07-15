@@ -1,0 +1,67 @@
+
+C2a P4 CHECKPOINT — chiral-completeness A0 cancellation across masses
+Target: NON-SINGLET SU(2) (1,2,1,2); Goldstone => A0_total=0 EXACT.
+        NOT the anomalous U(1)_A singlet (eta) sector.
+
+================================================================
+P4 GATE — chiral-completeness A0 cancellation  [m=0.3]
+  NON-SINGLET (1,2,1,2); Goldstone => A0_total=0 EXACT. Not the eta sector.
+  NMC=400000, seeds=(11, 23, 47)
+================================================================
+  class      A0 (box-code units, mean +- sd over seeds)
+  BOX        -0.079671 +- 0.000058
+  TRIANGLE   +0.159343 +- 0.000116
+  BUBBLE     +0.138439 +- 0.000023
+  SUNSET     -0.290814 +- 0.000073
+  CONTACT    +0.072703 +- 0.000018
+  --------------------------------------------------
+  A0_TOTAL   -4.263e-17 +- 6.548e-20
+  pointwise max|Sum_class density| = 1.450e-12  (exact cancellation => ~machine eps)
+  3 x (single-class MC error) threshold = 1.745e-04
+  P4 VERDICT: PASS  (|A0_total| < threshold)
+
+================================================================
+P4 GATE — chiral-completeness A0 cancellation  [m=0.15]
+  NON-SINGLET (1,2,1,2); Goldstone => A0_total=0 EXACT. Not the eta sector.
+  NMC=200000, seeds=(11, 23, 47)
+================================================================
+  class      A0 (box-code units, mean +- sd over seeds)
+  BOX        -0.145002 +- 0.001155
+  TRIANGLE   +0.290004 +- 0.002311
+  BUBBLE     +0.885605 +- 0.000299
+  SUNSET     -1.374143 +- 0.001154
+  CONTACT    +0.343536 +- 0.000288
+  --------------------------------------------------
+  A0_TOTAL   -9.868e-17 +- 1.035e-18
+  pointwise max|Sum_class density| = 1.410e-11  (exact cancellation => ~machine eps)
+  3 x (single-class MC error) threshold = 3.466e-03
+  P4 VERDICT: PASS  (|A0_total| < threshold)
+
+================================================================
+P4 GATE — chiral-completeness A0 cancellation  [m=0.08]
+  NON-SINGLET (1,2,1,2); Goldstone => A0_total=0 EXACT. Not the eta sector.
+  NMC=200000, seeds=(11, 23, 47)
+================================================================
+  class      A0 (box-code units, mean +- sd over seeds)
+  BOX        -0.209686 +- 0.006329
+  TRIANGLE   +0.419372 +- 0.012657
+  BUBBLE     +3.627826 +- 0.001548
+  SUNSET     -5.116682 +- 0.008383
+  CONTACT    +1.279170 +- 0.002096
+  --------------------------------------------------
+  A0_TOTAL   -1.390e-16 +- 1.706e-18
+  pointwise max|Sum_class density| = 1.492e-10  (exact cancellation => ~machine eps)
+  3 x (single-class MC error) threshold = 1.899e-02
+  P4 VERDICT: PASS  (|A0_total| < threshold)
+
+================================================================
+P4 CHECKPOINT SUMMARY
+================================================================
+  m=0.3  : A0_total=-4.263e-17  pointwise max=1.45e-12  PASS
+  m=0.15 : A0_total=-9.868e-17  pointwise max=1.41e-11  PASS
+  m=0.08 : A0_total=-1.390e-16  pointwise max=1.49e-10  PASS
+
+  P4 GATE: PASS (all masses)
+  Cancellation is a pointwise algebraic identity (Rider #4a),
+  hence regulator- and mass-independent. Diagram set + flavour
+  weights are correct. Checkpoint BEFORE the production kappa scan.

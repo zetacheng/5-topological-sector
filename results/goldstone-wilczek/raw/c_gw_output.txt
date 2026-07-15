@@ -1,0 +1,22 @@
+C6 anchor #1 — Goldstone-Wilczek coefficient c_GW (fermion loop)
+  c_GW = Gamma^0_loop / B^0_ref ; HARD GATE c_GW = 1 (unit baryon charge)
+======================================================================
+
+  cutoff-independence (m=0.30, a=0.01) -- anomaly-type finite coefficient:
+    Rmax= 1.0: c_GW = +0.97956 +0.00000i
+    Rmax= 2.0: c_GW = +0.99746 +0.00000i
+    Rmax= 4.0: c_GW = +0.99880 -0.00000i
+    Rmax= 8.0: c_GW = +0.99888 -0.00000i
+
+  m-independence (Rmax=4, a=0.01) -- topological, m-independent:
+    m=0.30: c_GW = +0.99880 -0.00000i
+    m=0.15: c_GW = +0.99556 -0.00000i
+
+  a->0 extrapolation (m=0.30, Rmax=4, linear in a^2):
+    a=0.005: c_GW = +0.999629 -0.000000i
+    a=0.010: c_GW = +0.998795 -0.000000i
+    a=0.020: c_GW = +0.995476 -0.000000i
+    a=0.040: c_GW = +0.982374 +0.000000i
+    => c_GW(a->0) = +0.999885 -0.000000i
+
+  HARD GATE  c_GW = 1 (unit baryon charge), real, cutoff-independent: PASS

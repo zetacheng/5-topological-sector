@@ -1,0 +1,53 @@
+
+======================================================================
+FLAVOUR-WEIGHT + SYMMETRY DERIVATION  (external legs a=(1,2,1,2))
+======================================================================
+
+[1] BOX necklace flavour anchor (fix leg0; 3 reflection reps):
+    necklace (0, 1, 2, 3) -> Tr_f = -2.0
+    necklace (0, 1, 3, 2) -> Tr_f = +2.0
+    necklace (0, 2, 1, 3) -> Tr_f = +2.0
+    lineage anchor (-2,+2,+2): True
+
+[2] S_flavour (sum over ordered comps x 24 assignments of Tr_f):
+    BOX       comps=[(1, 1, 1, 1)]  S_flavour = +16.000
+    TRIANGLE  comps=[(2, 1, 1), (1, 2, 1), (1, 1, 2)]  S_flavour = +48.000
+    BUBBLE    comps=[(2, 2)]  S_flavour = +16.000
+    SUNSET    comps=[(3, 1), (1, 3)]  S_flavour = +32.000
+    CONTACT   comps=[(4,)]  S_flavour = +16.000
+
+======================================================================
+[0] NORMALIZATION ANCHOR: unified full-symmetric BOX vs lineage box()
+======================================================================
+    unified BOX integral (20000 pts) = -0.074295
+    lineage box() integral            = -0.074223
+    (unified - lineage) integral = -7.152e-05 +- 1.369e-04  -> consistent with 0: True
+
+======================================================================
+[4] ANALYTIC vs NUMERIC k=0 density, and POINTWISE cancellation (Rider #4a)
+======================================================================
+    BOX      : max|numeric-analytic| = 2.22e-15
+    TRIANGLE : max|numeric-analytic| = 5.33e-15
+    BUBBLE   : max|numeric-analytic| = 4.44e-16
+    SUNSET   : max|numeric-analytic| = 2.22e-15
+    CONTACT  : max|numeric-analytic| = 4.44e-16
+    POINTWISE Sum_class density: max|.| = 6.66e-15   (Rider #4a: 0 => weights exact, regulator-independent)
+
+======================================================================
+[3] PER-CLASS A0 (k=0) in box-code units  [m=0.3, NMC=4000, seed=11]
+    (box-code unit = A_phys / (-2 m^4); common factor, irrelevant to A0=0)
+======================================================================
+    A0[BOX      ] = -0.080543
+    A0[TRIANGLE ] = +0.161087
+    A0[BUBBLE   ] = +0.137476
+    A0[SUNSET   ] = -0.290692
+    A0[CONTACT  ] = +0.072673
+    A0[TOTAL]     = +0.000000
+    integrand-level |sum|/|box| (first 4000 pts) = 1.035e-15 (Rider #4a: ~0 if weights exact)
+
+======================================================================
+SUMMARY
+======================================================================
+  box-reproduction anchor (unified==lineage) : PASS
+  analytic==numeric density                  : PASS
+  Rider #4a pointwise cancellation max|.|    : 6.66e-15  PASS

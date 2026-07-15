@@ -1,0 +1,11 @@
+{
+  "source_repository": "zetacheng/kappa-c2a",
+  "source_commit": "0ba85e578d438f4f9abcb2a10c501e74acc0b190",
+  "masses": [0.30, 0.15],
+  "cutoff_radii": [1.0, 2.0, 4.0, 8.0],
+  "external_momenta": [0.005, 0.01, 0.02, 0.04],
+  "default_samples": 262144,
+  "seed": 11,
+  "normalization_reference": "B0_ref = -i a^3/(2 pi^2)"
+}
+

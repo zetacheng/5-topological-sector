@@ -1,0 +1,15 @@
+{
+  "source_repository": "zetacheng/kappa-c2a",
+  "source_ref": "legacy-kappa/main",
+  "cutoff": {"geometry": "Euclidean sharp four-ball", "Lambda": 1.0},
+  "flavor_pattern": [1, 2, 1, 2],
+  "diagram_classes": ["BOX", "TRIANGLE", "BUBBLE", "SUNSET", "CONTACT"],
+  "masses": [0.08, 0.12, 0.15, 0.20, 0.30],
+  "seeds": [11, 23, 47],
+  "lambda_fit_points": [0.4, 0.55, 0.7, 0.85, 1.0],
+  "external_momentum_fractions": ["m/6", "m/4", "m/3"],
+  "kinematic_angles_degrees": [90, 45, 30, 120],
+  "pv_masses": [2.0, 4.0, 8.0],
+  "production_sampler": "Sobol importance QMC, rho(r) proportional to r^3/(r^2+m^2)^4"
+}
+
