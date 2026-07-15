@@ -33,11 +33,11 @@ None; infrastructure decision.
 `main`; repository governance files.
 
 
-## 2026-07-15 — Accept exact negative Paper 5 quartic coefficient
+## 2026-07-15 — Record exact negative Paper 5 quartic coefficient as supported
 
 ### Decision
 
-Accept the migrated result `kappa_U=-17/(1152 pi^2)`, subject to destination migration review.
+Record the migrated result `kappa_U=-17/(1152 pi^2)` as reproducibly supported, pending independent reviewer and PI acceptance.
 
 ### Reason
 
@@ -63,11 +63,11 @@ P5-C2A-03/04
 
 Migration branch; `derivations/c2a/`, `results/c2a/`.
 
-## 2026-07-15 — Withdraw positive Skyrme claim
+## 2026-07-15 — Record positive Skyrme claim as failed
 
 ### Decision
 
-Withdraw the positive quartic claim and retire stabilization arguments requiring it.
+Preserve the historical positive quartic claim in the ledger with `FAILED` status and retire stabilization arguments requiring it.
 
 ### Reason
 
@@ -93,11 +93,11 @@ P5-SK-STAB-01
 
 Migration branch; `CLAIMS.md`.
 
-## 2026-07-15 — Withdraw healthy-positive one-loop Berry-Maxwell sign
+## 2026-07-15 — Record healthy-positive one-loop Berry-Maxwell sign as failed
 
 ### Decision
 
-Record the inherited healthy-positive sign claim as failed at the tested order.
+Preserve the historical inherited healthy-positive sign claim in the ledger with `FAILED` status at the tested order.
 
 ### Reason
 

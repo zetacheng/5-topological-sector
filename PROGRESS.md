@@ -12,7 +12,7 @@ Unknown until the latest Paper 5 source is imported.
 
 The authoritative C2a record and independently separable Goldstone–Wilczek normalization have been migrated from `zetacheng/kappa-c2a`. Paper text has not been imported or updated.
 
-## Verified results
+## Reproducibly supported calculations
 
 - Complete five-class non-singlet SU(2) orientation derivative expansion.
 - Pointwise chiral-completeness cancellation: `A0 = 0`.
@@ -21,6 +21,16 @@ The authoritative C2a record and independently separable Goldstone–Wilczek nor
 - Exact finite-cutoff expression, numerical/analytic agreement, and aggregate table.
 - Regulator/PV confirmation of the negative sign.
 - Goldstone–Wilczek normalization `c_GW = 1`, separated from Paper 3 C6/vector conclusions.
+
+These calculations and their reproduction are complete. Their claims remain `SUPPORTED`, not `VERIFIED`, until independent reviewer acceptance and PI acceptance are recorded.
+
+## Migration and review status
+
+- Calculation and reproduction: complete.
+- Scientific-artifact migration: complete except for the Paper 5 source, figures, and bibliography.
+- Independent scientific review: pending.
+- PI acceptance: pending.
+- Merge readiness: review-status consistency is corrected on this branch; merge remains blocked pending final independent review and PI acceptance.
 
 ## Failed or retired routes
 
@@ -33,7 +43,7 @@ The authoritative C2a record and independently separable Goldstone–Wilczek nor
 
 - Independent review of this migration.
 - Import of the latest Paper 5 source, figures, and bibliography.
-- Paper-prose reconciliation with verified claims.
+- Paper-prose reconciliation with supported claims after formal acceptance.
 - Classification of mixed topological-mass/omega/DM and wrinkle-bound branches.
 
 ## Blocked items
@@ -44,7 +54,7 @@ The authoritative C2a record and independently separable Goldstone–Wilczek nor
 
 ## Next administrative action
 
-Obtain independent Claude/PI migration review and import the latest Paper 5 source without changing claims before acceptance.
+Obtain independent scientific review and PI acceptance, then import the latest Paper 5 source without promoting claims before acceptance.
 
 ## Last updated
 

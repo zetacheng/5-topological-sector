@@ -49,6 +49,18 @@ All five classes are present; analytic and matrix densities agree and cancel to 
 
 Legacy accepted record: PASS. Destination migration review pending.
 
+### Independent reviewer verdict
+
+PENDING
+
+### PI acceptance
+
+PENDING
+
+### Claim-promotion status
+
+Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+
 ### Consequences
 
 Incomplete box-only and positive-coefficient routes cannot be used.
@@ -119,6 +131,18 @@ The aggregate gives `kappa_U approximately -0.00149` across the controlled scan.
 ### Reviewer verdict
 
 Legacy accepted record: PASS. Destination migration review pending.
+
+### Independent reviewer verdict
+
+PENDING
+
+### PI acceptance
+
+PENDING
+
+### Claim-promotion status
+
+Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
 
 ### Consequences
 
@@ -191,6 +215,18 @@ Derivation, exact script, immutable output, provenance, verdict, and test.
 
 Legacy definitive check: PASS. Destination migration review pending.
 
+### Independent reviewer verdict
+
+PENDING
+
+### PI acceptance
+
+PENDING
+
+### Claim-promotion status
+
+Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+
 ### Consequences
 
 The controlled quartic coefficient is exactly negative.
@@ -262,6 +298,18 @@ Negative sign confirmed; exact controlled value remains `-17/(1152 pi^2)`.
 
 Legacy Task B: PASS. Destination migration review pending.
 
+### Independent reviewer verdict
+
+PENDING
+
+### PI acceptance
+
+PENDING
+
+### Claim-promotion status
+
+Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+
 ### Consequences
 
 The positive-sign claim fails independently of the production regulator.
@@ -332,6 +380,18 @@ Derivation, exact script, immutable output, provenance, verdict, and test.
 ### Reviewer verdict
 
 Legacy hard gate: PASS. Destination migration review pending.
+
+### Independent reviewer verdict
+
+PENDING
+
+### PI acceptance
+
+PENDING
+
+### Claim-promotion status
+
+Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
 
 ### Consequences
 

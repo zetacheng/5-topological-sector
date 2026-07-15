@@ -49,7 +49,7 @@ The audited legacy refs contain no clean authoritative Paper 5 paper source, fig
 - [x] Ruff passes
 - [x] structure tests pass
 - [x] no raw outputs edited
-- [x] no paper claim promoted without review
+- [x] no claim remains marked VERIFIED before independent review
 
 GNU Make was unavailable in the Windows migration environment. Each Make target's
 underlying command was run directly: structure test, Ruff, pytest, and the combined
@@ -65,3 +65,5 @@ Ruff-plus-pytest check all passed. GitHub CI remains configured to run the same 
 ## Migration assessment
 
 `PARTIAL — REVIEW REQUIRED`: the authoritative C2a and separable Goldstone–Wilczek records are migrated and reproducible; paper-source import and ambiguous mixed-ownership classification remain open.
+
+Scientific artifacts are migration-complete; formal claim acceptance and paper-source synchronization remain pending.

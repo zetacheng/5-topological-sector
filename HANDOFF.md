@@ -4,6 +4,14 @@
 
 Paper 5 historical migration from legacy `kappa-c2a` completed and awaiting review.
 
+## Status separation
+
+- Calculation and reproduction: complete.
+- Migration: complete except for the Paper 5 source, figures, and bibliography.
+- Independent scientific review: pending.
+- PI acceptance: pending.
+- Merge readiness: review-status consistency is corrected on this branch; merge remains blocked pending final independent review and PI acceptance.
+
 ## Scientific question
 
 Does the migration faithfully establish C2a and `c_GW=1` without importing Paper 3, Paper 4, or Paper 1 authority?
