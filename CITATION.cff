@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated Paper 5 record once it is imported."
+title: "Topological Sector of the Lattice Fermion Condensate"
+type: software
+authors:
+  - name: "5-topological-sector contributors"
+repository-code: "https://github.com/zetacheng/5-topological-sector"
+date-released: 2026-07-15
