@@ -98,7 +98,7 @@ Allowed classifications: `PAPER5_AUTHORITATIVE`, `PAPER5_SUPPORTING`, `PAPER3_OW
 | `results/closed_form_output.txt` | `legacy-kappa/main` | `4a0de1e2d6875f0ac27907395b3fc28b6bd7ce25` | Exact coefficient output | `PAPER5_AUTHORITATIVE` | `results/c2a/raw/closed_form_output.txt` | Copy byte-for-byte. |
 | `results/lambda_scan_output.txt` | `legacy-kappa/main` | `cba89de41183d08c587af5187edfbc8de659df9f` | Cutoff scan | `PAPER5_AUTHORITATIVE` | `results/c2a/raw/lambda_scan_output.txt` | Copy byte-for-byte. |
 | `results/pv_signcheck_output.txt` | `legacy-kappa/main` | `cba89de41183d08c587af5187edfbc8de659df9f` | PV output | `PAPER5_AUTHORITATIVE` | `results/c2a/raw/pv_signcheck_output.txt` | Copy byte-for-byte. |
-| `derivation/c6_matching.md` | `legacy-kappa/main` | `0ba85e578d438f4f9abcb2a10c501e74acc0b190` | GW normalization plus Paper 3 C6 matching | `PAPER5_SUPPORTING` | `derivations/goldstone-wilczek/derivation.md` | Transform: extract only signature and GW Step 1; omit C6, HS, Walecka, and vector verdict. |
+| `derivation/c6_matching.md` | `legacy-kappa/main` | `0ba85e578d438f4f9abcb2a10c501e74acc0b190` | GW normalization plus Paper 3 C6 matching | `PAPER5_SUPPORTING` | `derivations/goldstone-wilczek/derivation.md` | Transform: extract only GW Step 1; omit signature-dependent static-energy bookkeeping, C6, HS, Walecka, and vector verdict. |
 | `scripts/c_gw_loop.py` | `legacy-kappa/main` | `0ba85e578d438f4f9abcb2a10c501e74acc0b190` | Goldstone-Wilczek loop normalization | `PAPER5_AUTHORITATIVE` | `scripts/goldstone_wilczek/c_gw_loop.py` | Transform only gamma import to Paper 5 utility; physics logic unchanged. |
 | `results/c_gw_output.txt` | `legacy-kappa/main` | `0ba85e578d438f4f9abcb2a10c501e74acc0b190` | GW cutoff/mass/extrapolation output | `PAPER5_AUTHORITATIVE` | `results/goldstone-wilczek/raw/c_gw_output.txt` | Copy byte-for-byte. |
 | `scripts/c6_gate.py` | `legacy-kappa/main` | `0ba85e578d438f4f9abcb2a10c501e74acc0b190` | C6/HS bookkeeping | `PAPER3_OWNED` | — | Excluded. |
@@ -177,4 +177,3 @@ Allowed classifications: `PAPER5_AUTHORITATIVE`, `PAPER5_SUPPORTING`, `PAPER3_OW
 ## Import lock
 
 Only rows with a Paper 5 classification and an explicit destination may be imported in this migration. Ambiguous rows remain excluded until PI and independent reviewer classification. Paper 3/4/1 artifacts are referenced by SHA only and are not copied into Paper 5 production directories.
-
