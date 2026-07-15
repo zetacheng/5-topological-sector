@@ -2,39 +2,36 @@
 
 ## Current task
 
-Infrastructure initialization.
+Paper 5 historical migration from legacy `kappa-c2a` completed and awaiting review.
 
 ## Scientific question
 
-None. No physics gate is being run.
+Does the migration faithfully establish C2a and `c_GW=1` without importing Paper 3, Paper 4, or Paper 1 authority?
 
 ## Locked inputs
 
-Repository identity only.
+Inventory source SHAs; exact/PV state `cba89de41183d08c587af5187edfbc8de659df9f`; separable GW commit `0ba85e578d438f4f9abcb2a10c501e74acc0b190`.
 
 ## Do not reopen
 
-None recorded yet.
+Closed exact C2a gates without a documented inconsistency; the failed positive claim; cross-paper ownership decisions.
 
 ## Required next input
 
-Latest paper source, approved progress file, historical branches and accepted result records.
+Independent Claude/PI review; latest Paper 5 source; ownership decision for `legacy-kappa/topo-mass-radius` and `legacy-kappa/wrinkle-bound-excitation`.
 
 ## Expected Codex output
 
-A clean repository foundation.
+A reviewable migration PR with reproducible scripts, tests, immutable outputs, ledgers, and exclusions.
 
 ## Questions for ChatGPT
 
-None during infrastructure initialization.
+Can the mixed topological mass/radius record be separated from Paper 3 omega assumptions? Which CP1/Hopf/WZW/U(2)/U(3) gate is next?
 
 ## Questions for Claude
 
-None during infrastructure initialization.
+Verify the exact coefficient, PV sign, GW normalization, ambiguous classifications, and overclaim boundaries.
 
 ## Role separation
 
-- ChatGPT plans concepts, interpretations, derivations, gates, calculation specifications, assumptions, and competing interpretations; it does not certify numerical results.
-- Codex maintains the repository and implements reproducible calculations, tests, anchors, and results; it does not promote results into claims without review.
-- Claude independently reviews derivations and results, gives gate verdicts, identifies overclaims, and updates paper text only after acceptance.
-- The User / Principal Investigator owns the programme, approves assumptions, gates, and scope, accepts or rejects verdicts, and authorizes paper updates.
+ChatGPT plans; Codex implements and preserves provenance; Claude reviews; the PI accepts verdicts and authorizes paper updates.
