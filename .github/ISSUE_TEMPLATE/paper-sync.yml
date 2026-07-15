@@ -1,0 +1,29 @@
+name: Paper synchronization
+description: Track an approved paper-source import or accepted paper edit
+title: "[Paper sync] "
+labels: ["paper"]
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source version and provenance
+    validations:
+      required: true
+  - type: input
+    id: gate
+    attributes:
+      label: Accepted gate or authorization
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Files and sections in scope
+    validations:
+      required: true
+  - type: textarea
+    id: review
+    attributes:
+      label: Reviewer and PI acceptance
+    validations:
+      required: true

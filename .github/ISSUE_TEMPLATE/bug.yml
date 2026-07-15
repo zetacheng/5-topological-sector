@@ -1,0 +1,29 @@
+name: Reproducibility bug
+description: Report an infrastructure, test, script, or result-reproduction defect
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment, branch, and commit
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Scientific or paper impact
+    validations:
+      required: true
