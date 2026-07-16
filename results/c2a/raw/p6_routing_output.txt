@@ -1,0 +1,18 @@
+
+====================================================================
+P6 ROUTING / REGULATOR CROSS-VALIDATION  (m=0.15, e=0.0375)
+  evaluator: skyrme_fast unified full-symmetric, importance sampling
+====================================================================
+  A0_total [asym] = -1.665e-16  (routing-independent at k=0: expect ~0)
+  A0_total [sym ] = -1.665e-16  (routing-independent at k=0: expect ~0)
+
+  kappa_raw [asym] = -2.94777 +- 0.00156
+  kappa_raw [sym ] = -2.93346 +- 0.00006
+  |asym - sym| = 0.01431   combined MC band = 0.00156   resolved (>3 band): True
+  => routing (regulator) SYSTEMATIC on kappa_U = 7.24e-06
+     (sharp cutoff is not shift-invariant; the two prescriptions bracket
+      the sharp-cutoff proxy value. Decisive tool if load-bearing would
+      be the overlap-lattice derivative expansion -- P6 note.)
+  kappa_U (routing-avg) = -0.001489   S_mono = 640 kappa_U = -0.953 +- 0.005 (routing)
+  distance of S_mono from window [140,550] edge = 141.0; routing systematic = 0.005
+  P6 VERDICT: routing systematic is IMMATERIAL to the kill margin (systematic 0.005 << distance 141.0).

@@ -7,7 +7,11 @@ name = "topological-sector-research"
 version = "0.0.0"
 description = "Research infrastructure for Paper 5"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "numpy>=2.0,<3",
+  "scipy>=1.14,<2",
+  "sympy>=1.13,<2",
+]
 
 [tool.setuptools]
 packages = []
@@ -24,3 +28,8 @@ testpaths = ["tests"]
 [tool.ruff]
 target-version = "py311"
 line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/c2a/*.py" = ["E401", "E402", "E701", "E702", "E741", "F541", "F841"]
+"scripts/common/euclidean_gamma.py" = ["E701", "E702"]
+"scripts/goldstone_wilczek/c_gw_loop.py" = ["E702"]

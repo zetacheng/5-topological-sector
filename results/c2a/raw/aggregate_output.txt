@@ -1,0 +1,23 @@
+==============================================================================
+C2a PRODUCTION AGGREGATE — kappa_U(m) table + stacked band (CHECKPOINT)
+  evaluator: skyrme_fast unified full-symmetric (lineage box NOT mixed in)
+==============================================================================
+     m   kappa_raw       kappaU       bandU        MC      plat     resid     |A0|   cond   L6/L4
+  0.08   -36.38644    -0.001490    0.000005   0.02316   0.23088  5.77e-08  2.9e-08   4.12   0.034
+  0.12    -7.19014    -0.001491    0.000005   0.00503   0.04561  2.20e-08  2.9e-08   4.12   0.034
+  0.15    -2.94507    -0.001491    0.000005   0.00191   0.01868  1.54e-08  2.9e-08   4.12   0.034
+  0.20    -0.93162    -0.001491    0.000005   0.00037   0.00591  1.16e-08  2.9e-08   4.12   0.034
+  0.30    -0.18361    -0.001487    0.000005   0.00001   0.00117  6.61e-09  2.9e-08   4.12   0.034
+
+  LOG-LAW FIT  kappa_U(m) = a ln(Lambda/m) + b   (Lambda=1)
+    a = -0.00000 +- 0.00000
+    b = -0.00149 +- 0.00001
+    chi2/dof = 0.225/3 = 0.075
+    fit residuals (kappaU - fit): [ 1.08346e-06 -3.79006e-07 -8.71210e-07 -1.16693e-06  1.30573e-06]
+    log-law consistency (validity gate): OK
+
+  OPERATING POINT m=0.15: kappa_U = -0.00149 +- 0.00000
+
+  KILL-CRITERION ARITHMETIC (operating m=0.15):
+    S_mono = 640 * kappa_U = -0.95 +- 0.00
+    window [140, 550]; inside: False

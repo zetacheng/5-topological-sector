@@ -1,0 +1,29 @@
+C2a Task B — Pauli-Villars second-regulator sign check (m=0.15)
+  second regulator: common PV form factor F(p)=[M_PV^2/(p^2+M_PV^2)]^2 on
+  the loop momentum (chirally safe: A0 = F * sum_class density = 0 exactly),
+  sharp ball cutoff REMOVED (integrate over R^4). M_PV in cutoff units.
+  evaluator: skyrme_fast unified full-symmetric; single routing (asym).
+  NOTE: the naive scalar-denominator PV 1/(p^2+m^2)-1/(p^2+M^2) with the
+  numerator mass fixed at m breaks the pointwise A0 identity at finite M
+  (residual ~1/M^2); the common form factor is the chirally-consistent PV.
+======================================================================
+
+[1] A0 pointwise cancellation under the PV form factor (k=0):
+   M_PV=2.0: max|sum_class density| = 2.183e-11  mean|.|=2.436e-12  (=> CANCELS)
+   M_PV=4.0: max|sum_class density| = 2.365e-11  mean|.|=2.472e-12  (=> CANCELS)
+   M_PV=8.0: max|sum_class density| = 2.001e-11  mean|.|=2.476e-12  (=> CANCELS)
+
+[2] kappa_U under PV vs sharp cutoff:
+     M_PV      kappa_U(PV)
+      2.0 -0.001475 +- 0.000000
+      4.0 -0.001488 +- 0.000000
+      8.0 -0.001491 +- 0.000000
+   sharp cutoff (production)   -0.001491
+   closed form -17/(1152 pi^2) -0.001495
+
+[3] large-M_PV extrapolation (linear in 1/M_PV^2): kappa_U(M_PV->inf) = -0.001492
+    ANALYTIC (derive_kappa_closed Lambda-scan): kappa_U is EXACTLY
+    regulator-independent -- kappa_U(m->0, Lambda) = -17/(1152 pi^2)
+    for ALL Lambda -- so R^4 (cutoff removed) = -0.0014952, NEGATIVE.
+
+SIGN under second regulator: NEGATIVE CONFIRMED (value -0.001492, error 0.000000; all M_PV negative; analytically regulator-independent = -17/(1152 pi^2))

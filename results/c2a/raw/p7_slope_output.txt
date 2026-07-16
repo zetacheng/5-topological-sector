@@ -1,0 +1,25 @@
+
+==========================================================================
+P7 — deterministic QMC slope + analytic log-cancellation check
+  evaluator: skyrme_fast unified full-symmetric, QMC importance (N=262144)
+==========================================================================
+       m        m^4*c1        m^4*c2 kappa_U=(m^4)(c1-c2)/2
+    0.08     -0.001934     +0.001053              -0.001494
+    0.12     -0.001932     +0.001052              -0.001492
+    0.15     -0.001931     +0.001052              -0.001491
+    0.20     -0.001930     +0.001052              -0.001491
+    0.30     -0.001925     +0.001050              -0.001488
+
+  LOG-LAW SLOPES  X = a ln(Lambda/m) + b :
+    m^4*c1 (O1 struct): a1 = -0.000006   b1 = -0.001919
+    m^4*c2 (O2 struct): a2 = +0.000002   b2 = +0.001048
+    kappa_U (Skyrme)  : aK = -0.000004   bK = -0.001483
+    kappa_U log-law residuals: [ 0.        0.       -0.       -0.000001  0.000001]
+
+  FINDING: m^4*c1, m^4*c2 and kappa_U are each m-INDEPENDENT (a~0).
+  The IR/UV logs of the individual diagram classes cancel in the full
+  chiral set (Goldstone protection) already at the O(p^4) coefficient
+  level, so every O(p^4) structure -- and the Skyrme term in particular
+  -- comes out finite. Zero log slope is consistent with the constituent-
+  quark Skyrme term being UV-finite (Diakonov-Petrov / Ebert-Reinhardt);
+  the finite value b is scheme (cutoff) dependent, as expected (P7).

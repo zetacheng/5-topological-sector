@@ -1,0 +1,9 @@
+Legacy execution environment: NOT RECORDED IN SOURCE ARTIFACTS
+Migration reproduction date: 2026-07-15
+Python: 3.12.13
+Platform: Windows-11-10.0.26200-SP0
+NumPy: 2.3.5
+SciPy: 1.18.0
+Source repository: zetacheng/kappa-c2a
+Destination branch: sync/kappa-c2a-paper5-migration
+
