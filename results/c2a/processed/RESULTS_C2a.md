@@ -90,12 +90,17 @@ constituent-quark Skyrme term being finite (Diakonov–Petrov / Ebert–Reinhard
 > If the pinned kappa_U places S_mono = 640·kappa_U outside [140, 550], THE
 > DARK-ENERGY CHAIN TERMINATES.
 
-`S_mono = −0.95 ∉ [140, 550]`  →  **THE DARK-ENERGY CHAIN TERMINATES.**
+`S_mono = −0.95 ∉ [140, 550]`: the criterion, as pre-registered by the
+dark-energy paper, is **not met by this measurement**. The consequent termination
+verdict is recorded and owned by that paper (`paper4_dark_energy_v6_3.tex`, Sec.
+"The pre-registered verdict"), not by this repository.
 
 The result is doubly decisive: the magnitude is ~150× too small AND the sign is
 negative (the pilot P5 note: a negative kappa_U breaks the induced-Maxwell
-construction). Paper 4 v5.6–5.8 monopole-gate claims and Paper 5's kappa-sign
-entry (frozen under P5) are resolved AGAINST the dark-energy chain by this result.
+construction). This measurement is the input on which the companion paper
+retracted its v5.6–5.8 viability-gate claims, and on which this paper retracted its
+own positive-kappa entries (S2-1, Gate 3); cross-paper consequences are recorded
+in the owning papers.
 
 ### Scope / robustness caveat
 This is the continuum sharp-cutoff MC proxy (skyrme_sign2 lineage). Every gate
@@ -104,4 +109,5 @@ evaluators (matrix `skyrme_full`, analytic-trace `skyrme_fast`) and two
 integrators (pseudo-random MC, deterministic Sobol QMC) agree, and the verdict
 holds by ~150× — far outside any residual regulator systematic. Per P6, the
 formally decisive tool would be the overlap-lattice derivative expansion, but the
-margin here makes that unnecessary to reach the TERMINATE verdict.
+margin here makes the criterion mismatch robust; the companion paper owns the
+consequent termination verdict.
