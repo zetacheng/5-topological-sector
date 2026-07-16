@@ -6,11 +6,11 @@ Paper 5 — Topological Sector of the Lattice Fermion Condensate (`5-topological
 
 ## Current version
 
-v0.22, imported as `paper/paper5_internal_dimension_v0_22.tex` from the PI-supplied source.
+v0.23, imported as `paper/paper5_internal_dimension_v0_23.tex` from the PI-supplied source; v0.22 is retained alongside it.
 
 ## Current scientific status
 
-The authoritative C2a record and independently separable Goldstone–Wilczek normalization have been migrated from `zetacheng/kappa-c2a`. Paper 5 v0.22 is imported unchanged, and the claim ledger points to its relevant sections. P5-CL-001, P5-CL-002, P5-CL-003, and P5-CL-007 are accepted as verified.
+The authoritative C2a record and independently separable Goldstone–Wilczek normalization have been migrated from `zetacheng/kappa-c2a`. Paper 5 v0.23 is imported alongside v0.22, and the claim ledger points to its relevant sections. P5-CL-001, P5-CL-002, P5-CL-003, and P5-CL-007 are accepted as verified.
 
 ## Verified results
 

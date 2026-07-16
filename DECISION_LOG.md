@@ -251,3 +251,33 @@ None.
 ### Related branch and files
 
 `fix/audit-2026-07-16`; `CLAIMS.md`, `GATES.md`, and `reviews/claude/2026-07-16-c2a.md`.
+
+## 2026-07-16 — Retract minimal-pair zero V/A Fierz entry
+
+### Decision
+
+Retract this note's Fierz entry that the minimal chiral pair gives identically zero vector and axial couplings, and retract the single-coupling economy postulate erected on it.
+
+### Reason
+
+The zero was a `gamma5`-without-the-`i` convention slip. The chirally invariant pair gives `|c_V| = |c_A| = 1/2`.
+
+### Evidence
+
+`paper/paper5_internal_dimension_v0_23.tex`, Sec. “Gates and next actions,” Fierz arithmetic; `zetacheng/3-vector-sector` P3-FIERZ-01 and `results/u3-fierz/`; independent reviewer confirmation against the standard Fierz table.
+
+### Consequences
+
+Cross-channel ratios are Fierz-inherited. Any programme statement resting on vanishing V/A content or the economy postulate requires re-examination; those statements are owned by companion papers and are flagged, not amended here.
+
+### Supersedes
+
+The v0.19 Fierz entry.
+
+### Related gate
+
+P3-FIERZ-01 (companion repository); P5-OMEGA-01 (Paper 5 topological-stabilization scope).
+
+### Related branch and files
+
+`paper/v0.23`; `paper/paper5_internal_dimension_v0_23.tex`, `CLAIMS.md`, `GATES.md`, and `MIGRATION.md`.
