@@ -10,27 +10,24 @@ v0.22, imported as `paper/paper5_internal_dimension_v0_22.tex` from the PI-suppl
 
 ## Current scientific status
 
-The authoritative C2a record and independently separable Goldstone–Wilczek normalization have been migrated from `zetacheng/kappa-c2a`. Paper 5 v0.22 is imported unchanged, and the claim ledger now points to its relevant sections. No paper claim has been promoted.
+The authoritative C2a record and independently separable Goldstone–Wilczek normalization have been migrated from `zetacheng/kappa-c2a`. Paper 5 v0.22 is imported unchanged, and the claim ledger points to its relevant sections. P5-CL-001, P5-CL-002, P5-CL-003, and P5-CL-007 are accepted as verified.
 
-## Reproducibly supported calculations
+## Verified results
 
-- Complete five-class non-singlet SU(2) orientation derivative expansion.
-- Pointwise chiral-completeness cancellation: `A0 = 0`.
-- Flavor, symmetry, startup, Ward `m^4`, and independent-evaluator anchors.
+- Full non-singlet five-class chiral completeness.
+- Pointwise `A0 = 0`.
 - Exact controlled-limit coefficient `kappa_U = -17/(1152 pi^2)`.
-- Exact finite-cutoff expression, numerical/analytic agreement, and aggregate table.
-- Regulator/PV confirmation of the negative sign.
-- Goldstone–Wilczek normalization `c_GW = 1`, separated from Paper 3 C6/vector conclusions.
+- Goldstone-Wilczek normalization `c_GW = 1`.
 
-These calculations and their reproduction are complete. Their claims remain `SUPPORTED`, not `VERIFIED`, until independent reviewer acceptance and PI acceptance are recorded.
+All four were independently reproduced and PI-accepted on 2026-07-16.
 
 ## Migration and review status
 
 - Calculation and reproduction: complete.
 - Scientific-artifact migration: complete, including the PI-supplied Paper 5 v0.22 source; figures and bibliography remain unavailable.
-- Independent scientific review: pending.
-- PI acceptance: pending.
-- Merge readiness: review-status consistency is corrected on this branch; merge remains blocked pending final independent review and PI acceptance.
+- Independent scientific review: complete.
+- PI acceptance: complete.
+- Merge readiness: accepted closed gates are ready for merge.
 
 ## Failed or retired routes
 
@@ -41,9 +38,8 @@ These calculations and their reproduction are complete. Their claims remain `SUP
 
 ## Active work
 
-- Independent review of this migration.
 - Import or reconciliation of the Paper 5 figures and bibliography when supplied.
-- Paper-prose reconciliation with supported claims after formal acceptance.
+- Paper-prose reconciliation with verified claims, if authorized as a separate task.
 - Classification of mixed topological-mass/omega/DM and wrinkle-bound branches.
 
 ## Blocked items
@@ -54,7 +50,7 @@ These calculations and their reproduction are complete. Their claims remain `SUP
 
 ## Next administrative action
 
-Complete the corrective audit, obtain PI acceptance, and reconcile the imported v0.22 source with accepted claim statuses without promoting claims prematurely.
+Begin scope-separated omega migration under P5-OMEGA-01 after PI scope approval.
 
 ## Last updated
 

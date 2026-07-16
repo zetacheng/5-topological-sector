@@ -51,15 +51,15 @@ Legacy accepted record: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -134,15 +134,15 @@ Legacy accepted record: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -217,15 +217,15 @@ Legacy definitive check: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -372,15 +372,15 @@ Legacy Task B: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -455,15 +455,15 @@ Legacy hard gate: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
