@@ -9,9 +9,11 @@ from itertools import permutations
 from pathlib import Path
 
 import numpy as np
+import sympy as sp
 
 from scripts.c2a import skyrme_fast, skyrme_full
 from scripts.c2a.aggregate import build, load
+from scripts.c2a.derive_kappa_closed import derive_kappa_closed, msym
 from scripts.c2a.derive_classes import (
     CLASSES,
     amp_phys_single_p,
@@ -160,3 +162,10 @@ def test_exact_limiting_value() -> None:
     assert expected < 0
     assert math.isclose(exact_kappa(1e-8), expected, rel_tol=0, abs_tol=1e-15)
 
+
+def test_symbolic_derivation_matches_closed_form_regression_anchor() -> None:
+    derived = derive_kappa_closed(region="ball")
+    expected = (
+        -90 * msym**6 - 170 * msym**4 - 85 * msym**2 - 17
+    ) / (1152 * sp.pi**2 * (msym**2 + 1) ** 5)
+    assert sp.simplify(derived - expected) == 0

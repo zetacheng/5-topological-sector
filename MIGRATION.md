@@ -13,11 +13,11 @@ Repository: `zetacheng/kappa-c2a`
 
 ## Paper source
 
-- [ ] latest Paper 5 source imported
+- [x] latest Paper 5 source imported
 - [ ] figures imported
 - [ ] bibliography imported
 
-The audited legacy refs contain no clean authoritative Paper 5 paper source, figure set, or bibliography.
+The audited legacy refs contain no clean authoritative Paper 5 paper source, figure set, or bibliography. The PI separately supplied `paper5_internal_dimension_v0_22.tex`, now imported under `paper/`; figures and bibliography remain unavailable.
 
 ## Scientific record
 
@@ -49,7 +49,7 @@ The audited legacy refs contain no clean authoritative Paper 5 paper source, fig
 - [x] Ruff passes
 - [x] structure tests pass
 - [x] no raw outputs edited
-- [x] no claim remains marked VERIFIED before independent review
+- [x] no claim was promoted before independent review and PI acceptance
 
 GNU Make was unavailable in the Windows migration environment. Each Make target's
 underlying command was run directly: structure test, Ruff, pytest, and the combined
@@ -58,12 +58,19 @@ Ruff-plus-pytest check all passed. GitHub CI remains configured to run the same 
 ## Unresolved review items
 
 - `legacy-kappa/topo-mass-radius` combines a Paper 5 topology question with Paper 3 omega inputs and Paper 1 dark-matter framing.
+- Its omega quantities `Z_omega`, `M_omega^2`, `g_omegaB`, and `D_00(0,q)`, plus the Fierz pinning `G_omega=-G/N`, await scope-separated migration and independent review under P5-OMEGA-01.
 - `legacy-kappa/wrinkle-bound-excitation` combines Paper 4 interface and Paper 1 excitation/DM framing.
-- Latest Paper 5 paper source, figures, and bibliography remain unavailable.
-- Destination independent Claude/PI review remains pending.
+- Paper 5 v0.22 source is imported; its figures and bibliography remain unavailable.
+- Independent Claude review and PI acceptance are complete for the authoritative C2a and separable Goldstone-Wilczek records.
 
 ## Migration assessment
 
-`PARTIAL — REVIEW REQUIRED`: the authoritative C2a and separable Goldstone–Wilczek records are migrated and reproducible; paper-source import and ambiguous mixed-ownership classification remain open.
+`SCIENTIFIC RECORD MIGRATION COMPLETE — ANCILLARY PAPER ASSETS AND MIXED-OWNERSHIP ROUTES REMAIN OPEN.`
 
-Scientific artifacts are migration-complete; formal claim acceptance and paper-source synchronization remain pending.
+- Authoritative C2a scientific record: complete.
+- Separable Goldstone-Wilczek record: complete.
+- Independent review: complete.
+- PI acceptance: complete.
+- Latest Paper 5 v0.22 source: present.
+- Figures and bibliography: pending.
+- Mixed-ownership `topo-mass-radius` and `wrinkle-bound-excitation`: intentionally not imported and still require separate ownership review.

@@ -70,6 +70,10 @@ def ball_monomial(exps, M, m, region='R4', R=None):
         return sp.Integer(0)
     K = 3 + sum(exps)
     rad = radial_R4(K, M, m) if region == 'R4' else radial_ball(K, M, m, R)
+    if rad is None:
+        raise ValueError(
+            f"Divergent monomial exps={exps}, K={K}, M={M}, region={region}"
+        )
     return ang * rad
 
 
@@ -179,6 +183,47 @@ def class_A4(name, config_dirs, region='R4', route='asym'):
     return sp.simplify(total * meas / conv)
 
 
+def derive_kappa_closed(region='ball'):
+    """Derive the full five-class exact ``kappa_U`` for the selected region."""
+    from itertools import permutations
+
+    def unit_dirs(cosine, sine):
+        return [
+            sp.Matrix([1, 0, 0, 0]),
+            sp.Matrix([cosine, sine, 0, 0]),
+            sp.Matrix([-1, 0, 0, 0]),
+            sp.Matrix([-cosine, -sine, 0, 0]),
+        ]
+
+    def operator_value(dirs_sym, which):
+        flavors = [0, 1, 0, 1]
+        total = sp.Integer(0)
+        for perm in permutations(range(4)):
+            momenta = [dirs_sym[i] for i in perm]
+            permuted_flavors = [flavors[i] for i in perm]
+            if permuted_flavors[0] == permuted_flavors[1] and permuted_flavors[2] == permuted_flavors[3]:
+                if which == 'O1':
+                    total += momenta[0].dot(momenta[1]) * momenta[2].dot(momenta[3])
+                else:
+                    total += momenta[0].dot(momenta[2]) * momenta[1].dot(momenta[3])
+        return sp.nsimplify(total)
+
+    rational = sp.Rational
+    cfg_a = unit_dirs(0, 1)
+    cfg_b = unit_dirs(rational(1, 2), sp.sqrt(3) / 2)
+    sum_a = sp.simplify(sum(class_A4(name, cfg_a, region=region) for name in CLASSES))
+    sum_b = sp.simplify(sum(class_A4(name, cfg_b, region=region) for name in CLASSES))
+    o1_a, o2_a = operator_value(cfg_a, 'O1'), operator_value(cfg_a, 'O2')
+    o1_b, o2_b = operator_value(cfg_b, 'O1'), operator_value(cfg_b, 'O2')
+    c1, c2 = sp.symbols('c1 c2')
+    solution = sp.solve(
+        [sp.Eq(sum_a, c1 * o1_a + c2 * o2_a), sp.Eq(sum_b, c1 * o1_b + c2 * o2_b)],
+        [c1, c2],
+    )
+    kappa_raw = sp.simplify((solution[c1] - solution[c2]) / 2)
+    return sp.cancel(msym**4 * kappa_raw)
+
+
 def group_e4_density_at(comp, C_entries, offs_num, pval, mval):
     """Numeric value of the analytic e^4-coeff density sum_M P_M/D0^M at a point p."""
     terms = group_e4_terms(comp, C_entries, [list(o) for o in offs_num])
@@ -234,7 +279,7 @@ if __name__ == "__main__":
                 else:
                     tot += (l[0].dot(l[2]))*(l[1].dot(l[3]))
         return sp.nsimplify(tot)
-    region = sys.argv[1] if len(sys.argv) > 1 else 'R4'
+    region = sys.argv[1] if len(sys.argv) > 1 else 'ball'
     print(f"\n=== CLOSED-FORM kappa_U  (region={region}) ===")
     A4A = {}; A4B = {}
     for name in CLASSES:

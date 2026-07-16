@@ -1,0 +1,989 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newcommand{\workingnote}[1]{\textcolor{red}{\textbf{[v0.1 NOTE: #1]}}}
+
+\title{\textbf{A Finite Internal Dimension from the Condensate:\\
+Deconstruction, the Composite Spectrum,\\
+and a Falsifiability Test}\\[1ex]
+\large Working note v0.22 --- NOT a manuscript.\\
+Status: concept + test design + partial numerics; v0.20 records a
+MEASUREMENT-FORCED CORRECTION: the induced Skyrme coefficient is
+now known exactly and is NEGATIVE
+($\kappa_U = -17/(1152\pi^2)$, chirally complete, closed form +
+Pauli--Villars confirmed), retracting this note's earlier
+positive-sign entries (S2-1, Gate 3) and re-scoping soliton
+stabilization to the endogenous flavor-singlet $\omega$ channel
+(existence and dynamization gates passed; continuum-radius gate
+open).
+v0.22 records the consequences of that same measurement for gate
+S2-2: a $3{+}1$D physics correction inherited from the companion
+dark-energy paper, the monopole-action arithmetic
+$S_{\rm mono} = -85/(9\pi^2)$, and the retraction of the
+Coulomb-side resolution that the superseded $\kappa$ numbers had
+supported; and it states the provenance status of the $\omega$
+gates.}
+
+\author{Zeta Hoi-Ho Cheng \\
+\textit{Independent Researcher, Ontario, Canada}}
+
+\date{July 2026 (v0.22)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We record a hypothesis and its kill criteria.
+The hypothesis: the composite spectrum of the $H(4)$ lattice
+fermion condensate is organized by an emergent finite internal
+dimension, in the precise sense of dimensional deconstruction ---
+$N$ four-dimensional fields with a specific hopping mass matrix
+are the same theory as one field on $M_4$ times an $N$-site
+internal lattice, and the condensate's Goldstone modes are
+candidates for the link fields that build the internal hops.
+On this reading, the composite masses of the programme
+($m_P$, $m_\sigma$, $m_V$, $m_A$) are not independent parameters
+but must fall, as \emph{ratios}, on the eigenvalue spectrum of a
+discrete one-dimensional Laplacian for some small $N$ and boundary
+condition.
+This note fixes the dictionary, designs the spectral test, records
+the numerical results in hand (updated in v0.19 to the overlap
+frame: an exact Goldstone $m_\pi = 0$, a measured $m_\sigma$ law
+with chiral-limit intercept unity, a unified $S/P$ criticality and
+a degenerate $V/A$ criticality map---with the caveat that at the
+invariant-universal coupling the vector channel supports no
+below-threshold bound state; the earlier Wilson-frame table, with
+its blocked scalar channel and axial floor, is retained as the
+historical record of the diagnosis), and
+states what would kill the hypothesis.
+Two of this note's own entries have since been retracted by
+measurement and are recorded as such: the induced quartic-gradient
+(Skyrme) coefficient, previously reported positive, is now known
+exactly and is \emph{negative},
+$\kappa_U = -17/(1152\pi^2)$, which withdraws both the one-loop
+soliton stabilizer and the positive Berry--Maxwell term inherited
+by the orientation layer's photon candidate (gate S2-1), and
+suspends the monopole gate S2-2 behind it; soliton stabilization
+is re-scoped onto the endogenous flavor-singlet $\omega$ channel,
+whose continuum-radius gate is open.
+No claim of confirmation is made or available at this stage.
+\end{abstract}
+
+% ===================================================================
+\section{Scope and non-claims}
+\label{sec:scope}
+% ===================================================================
+
+This note is deliberately narrower than the intuition that
+motivated it.
+We do \emph{not} propose an interpretation of quantum mechanics;
+no claim is made that quantum uncertainty, the Born rule, or
+exchange statistics originate in motion along a hidden dimension,
+and nothing here engages Bell-type theorems, because nothing here
+needs to: deconstruction reorganizes \emph{field content}, taking
+quantum field theory as given.
+The only physical question asked is structural:
+
+\begin{quote}
+\emph{Do the composite masses of the condensate programme fit the
+eigenvalue spectrum of a discrete internal Laplacian for some
+small $N$, so that their ratios become outputs rather than
+inputs?}
+\end{quote}
+
+If yes, the internal-dimension language earns its keep as an
+organizing principle and parameter-reducer.
+If no, the language is decoration for this model and the
+hypothesis is dead in its minimal form.
+Both outcomes are recorded as acceptable.
+
+% ===================================================================
+\section{The dictionary: deconstruction in brief}
+\label{sec:dict}
+% ===================================================================
+
+\subsection{One field on an internal lattice $\equiv$ $N$ fields
+with a hopping matrix}
+
+Let $\phi(x,n)$, $n = 0,\dots,N-1$, live on $M_4$ times an
+$N$-site internal lattice with spacing $b$ and hopping term
+$\frac{1}{b^2}\sum_n |\phi(x,n{+}1)-\phi(x,n)|^2$.
+Discrete Fourier transform in $n$ diagonalizes the hopping matrix;
+for a periodic ring the four-dimensional mass tower is
+\begin{equation}
+m_k^2 = \frac{4}{b^2}\,\sin^2\!\frac{\pi k}{N},
+\qquad k = 0,1,\dots,N-1,
+\label{eq:ring}
+\end{equation}
+while an open chain (free boundaries) gives the cosine-type
+spectrum
+\begin{equation}
+m_k^2 = \frac{4}{b^2}\,\sin^2\!\frac{\pi k}{2N},
+\qquad k = 0,1,\dots,N-1,
+\label{eq:chain}
+\end{equation}
+and fixed or twisted boundaries shift the allowed $k$.
+Small $k$ reproduces a Kaluza--Klein tower with
+$1/R \to 1/(Nb)$.
+The converse statement is the content of dimensional
+deconstruction (Arkani-Hamed--Cohen--Georgi; Hill--Pokorski--Wang,
+2001): $N$ four-dimensional fields whose mass matrix is a discrete
+Laplacian \emph{are} a lattice extra dimension.
+Whether ``the dimension exists'' is therefore not an ontological
+question; the only physical content is whether the spectrum
+follows a discrete-Laplacian eigenvalue structure.
+
+\subsection{Where the links come from: condensate Goldstones}
+
+In the original moose construction the link fields connecting
+adjacent sites are not fundamental: they are nonlinear
+sigma-model fields --- Goldstone modes of fermion condensates.
+The arrow of explanation is
+\begin{equation}
+\text{condensate} \;\to\; \text{Goldstone links} \;\to\;
+\text{hopping matrix} \;\to\; \text{internal dimension},
+\label{eq:arrow}
+\end{equation}
+which matches the direction of the present programme: the
+dimension, if present, is an \emph{output} of the condensate's
+internal structure, not a postulated background.
+The angular pseudo-Goldstone of the complex condensate
+(Papers~2 and~4) is the first candidate link degree of freedom;
+whether the $H(4)$ condensate's internal structure is rich enough
+to furnish a link \emph{chain} (rather than a single phase) is an
+open structural question and part of the Fierz analysis
+(Section~\ref{sec:gates}).
+
+\subsection{Fermion side: domain-wall correspondence}
+
+The fermionic counterpart of a finite internal dimension with a
+mass profile is the domain-wall construction: chiral zero modes
+localize on the boundaries, and four-dimensional chirality is
+reread as boundary localization in the internal direction.
+This is the rigorous residue of the original ``spin from a fourth
+dimension'' intuition --- weaker, but exact.
+It is deliberately \emph{not} the entry point of the test
+(no independent fermionic spectrum data exist); it is the second
+step, to be revisited only if the bosonic spectral test passes.
+
+% ===================================================================
+\section{The spectral test}
+\label{sec:test}
+% ===================================================================
+
+\subsection{Design}
+
+The test operates on composite-boson mass \emph{ratios} at fixed
+microscopic couplings:
+\begin{enumerate}
+\item Assemble the composite spectrum
+$\{m_P,\, m_\sigma,\, m_V,\, m_A\}$ in lattice units at a single
+$(G, m_f)$ point, with couplings across channels fixed by the
+Fierz decomposition of the microscopic four-fermion structure
+(not tuned independently).
+\item Ask whether the mass-squared ratios coincide, within
+combined errors, with eigenvalue ratios of
+Eq.~\eqref{eq:ring} or Eq.~\eqref{eq:chain} (or a twisted variant)
+for some $N \le 5$.
+The overall scale $4/b^2$ is one free parameter; the ratios are
+not.
+\item The pseudoscalar, being Goldstone-adjacent, is a natural
+$k=0$ zero mode; a spectrum with an exact (or near) zero mode
+favors periodic or free boundaries.
+\end{enumerate}
+
+\subsection{Kill criteria}
+
+The hypothesis is dead in its minimal form if any of the
+following holds:
+(i) no $N \le 5$ and boundary condition reproduces the measured
+ratios within errors;
+(ii) the Fierz-fixed couplings, once computed, remove the freedom
+needed to place even two states consistently on any candidate
+spectrum;
+(iii) the chirally clean scalar extraction places $m_\sigma$ in a
+position incompatible with every candidate spectrum that
+accommodates $m_V$ and the $m_A$ floor.
+A fit achieved only by letting $N$ grow or by tuning couplings
+per channel is a failure, not a success: the entire value of the
+hypothesis is parameter reduction.
+
+% ===================================================================
+\section{Partial results in hand (Wilson-frame run, July 2026;
+superseded in part --- see the update at the end of this section)}
+\label{sec:partial}
+% ===================================================================
+
+All numbers below are from the calibrated bubble pipeline
+(Wilson $r=1$, volumes to $160^4$, conventions anchored to the
+companion vector-channel paper: published $\Pi_V(0)$ at
+$m_f a = 0.2, 0.5$ reproduced to better than $0.1\%$;
+$\Pi_A(0) \simeq -0.19$ reproduced; the gap-equation input
+$I_0 = 0.0844$ of the gravity paper independently reproduced).
+EFT composite masses are defined by
+$m_\Gamma^2 = [\,1/G_\Gamma - \Pi_\Gamma(0)\,]/Z_\Gamma$ with
+$Z_\Gamma = d\Pi_\Gamma/dE^2$ from the analytic continuation
+$q_0 \to iE$ of the finite momentum sum.
+
+\begin{center}
+\begin{tabular}{lccl}
+\toprule
+Channel & $\Pi_\Gamma(0)$ ($m_f a{=}0.05$) & $Z_\Gamma$ & Status \\
+\midrule
+$P$ & $+0.331$ & $+0.081$ & Goldstone-adjacent; candidate $k{=}0$ \\
+$V$ (spatial) & $+0.284$ & $+0.058$ & healthy; mass dial
+  $m_V^2 a^2 = [1/G_V - 0.284]/0.058$ \\
+$A$ (spatial) & $-0.189$ & $+0.044$ & \emph{floor}:
+  $m_A a \ge 2.08$ even at $G_A \to \infty$ \\
+$S$ & $+0.141$ & $-0.066$ & blocked: Wilson-contaminated vertex,
+  wrong-sign $Z$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Notes.
+(1) The axial floor is the first quantitative form of ``axial
+permanently heavy'' (the companion paper had the sign argument
+only); it is an extrapolation of the $q^2$-expansion beyond its
+small-$E$ regime and is indicative.
+At $m_f a = 0.2$ the floor is $m_A a \ge 3.18$.
+(2) A consistency check: the vector-paper scenario
+$m_V = e^{-2}\Lambda$ with $a\Lambda = \pi$ requires
+$G_V = 3.40$, at the lower edge of the published criticality band
+$G_c^V = 3.4$--$4.4$.
+(3) The scalar block is understood, not merely observed: the
+lattice $\bar\psi\psi$ bubble fails the continuum consistency
+condition (shared-coupling Goldstone $+$ $\sigma$ pole at $2m_f$),
+its induced kinetic term carries the wrong sign at small momenta,
+and a central-Brillouin-zone mask does not repair it because the
+Wilson mass is $\mathcal{O}(1)$ across the zone.
+The same pathology class blocked the direct $\beta_F$ extraction
+in the gravity paper.
+(4) The gap-versus-bubble criticality spread
+($3.02 / 5.93 / 7.09$) is documented in the gravity paper v2.9
+and caps what scalar-channel bubble numbers may be used for.
+
+\emph{Test status at the time of the Wilson run: not yet runnable.}
+Hard data points: $m_P \approx 0$ and the $m_A$ floor.
+Dial: $m_V(G_V)$, awaiting Fierz.
+Missing: $m_\sigma$ (blocked), Fierz-fixed coupling ratios.
+
+\subsection*{Overlap-frame update (v0.19): the table above is
+superseded}
+
+The Ginsparg--Wilson (overlap) campaign has since replaced the
+Wilson-frame numbers above; the table is retained as the
+historical record of the diagnosis (the Wilson scalar block, in
+particular, is confirmed as a discretization artifact).  The
+current spectral inputs are:
+\begin{itemize}
+\item \textbf{$S/P$ sector unified and healthy.}  Exact
+$\Pi_S = \Pi_P$ degeneracy by the lattice chiral Ward identity;
+single criticality $G_c^{S/P} = 1/0.130 = 7.69$ (overlap units,
+$\rho = 1$); $Z_S = +0.065 > 0$---the scalar channel is no longer
+blocked.
+\item \textbf{$m_\sigma$ measured.}  True-pole scan across
+$m_{\rm dyn} a = 0.1$--$0.4$:
+$m_\sigma/(2m_{\rm dyn}) = 1 - 0.98\,(m_{\rm dyn}a)
++ 0.72\,(m_{\rm dyn}a)^2$, chiral-limit intercept $1.000(10)$
+(details in the spectral-test anchor of
+Section~\ref{sec:u3seed}).
+\item \textbf{$V/A$ sector.}  With chirally improved vertices,
+exactly degenerate at $m_f \to 0$: $G_c^{V/A} = 1/0.065 = 15.4$;
+$Z_V > 0$.  The Wilson-frame axial floor is retired in this frame
+(the $V$--$A$ splitting grows with $m_f$ as chiral symmetry
+predicts, rather than the axial being permanently heavy).
+\item \textbf{Tensor.}  $T_T \to 0$ in the chiral limit
+(continuum-consistent); $G_c^T \to \infty$.
+\item \textbf{Vector-state caveat.}  The companion vector-channel
+paper's pole-level analysis shows that at the invariant-universal
+coupling $G = G_\chi = 0.5\,G_c^{V/A}$ the vector channel supports
+\emph{no below-threshold bound state}; a genuine light vector
+requires sub-percent proximity to $G_c^{V/A}$.  Any candidate
+tower must therefore either place the vector on the continuum
+(resonance) side or restrict itself to the states that exist.
+\end{itemize}
+\emph{Test status now: the mass side is anchored}
+($m_\pi = 0$ exact, the $m_\sigma$ law above, and the $V/A$
+criticality map with the vector-state caveat); \emph{the coupling
+gate remains the outstanding requirement}, in re-scoped form: the
+minimal chiral pair generates exactly zero $V/A$ coupling by Fierz
+(machine-verified), so cross-channel coupling ratios are not
+Fierz-inherited; in the adopted invariant-universal model they are
+fixed instead by the single-coupling economy postulate
+($G_V = G_A = G_\chi$).  Whether that postulate, combined with the
+vector-state caveat, leaves enough of a tower for the $N \le 5$
+fit to be meaningful is an open design question recorded in
+Section~\ref{sec:gates}.
+
+
+% ===================================================================
+\section{Near-critical geometry: the equivalence-principle test}
+\label{sec:epgeom}
+% ===================================================================
+
+\subsection{The conjecture, and the death of its naive form}
+
+The intuition: near-criticality is not parameter tuning but the
+mathematical condition for a discrete substrate to admit a
+continuum geometry---when $\xi \gg a$, excitations cannot resolve
+the lattice and hypercubic anisotropies wash out.
+This is Wilsonian renormalization-group lore, and its standard
+quantitative form is \emph{power-law} irrelevance:
+species-dependent metric responses suppressed as $(a/\xi)^p$,
+$p > 0$.
+
+\textbf{The power-law form is refuted by our own measurement.}
+A species-resolved light-cone test (uniform temporal deformation
+of the substrate; effective speeds $c_\Gamma^2 = Z^{(s)}_\Gamma /
+Z^{(t)}_\Gamma$ per channel; built-in isotropy validation at
+$\varepsilon = 0$) gives, across three fermion masses
+$m_f a = 0.2, 0.1, 0.05$, a composite--fermion cone split of
+$10\% \to 7.1\% \to 5.6\%$ (pseudoscalar; vector similar), lying
+on the one-parameter curve
+\begin{equation}
+\delta c^2_\Gamma \;=\; \frac{A_\Gamma}{\ln\!\bigl(1/(m_f a)\bigr)},
+\qquad A_P \simeq 0.16,\; A_V \simeq 0.19,
+\label{eq:loglaw}
+\end{equation}
+to within $0.3$ percentage points at every point:
+\emph{logarithmic}, not power-law, restoration.
+The mechanism is identified: $c^2$ is a \emph{matching
+coefficient} fixed where the composite is assembled, and the
+bound-state wavefunction has $\mathcal{O}(1)$ support at the
+cutoff, so ultraviolet anisotropy leaks in at $1/\log$ rather
+than being power-suppressed.  Wilsonian irrelevance protects the
+effective operators of an already-light field; it does not
+protect compositeness matching.  This is precisely why the
+Collins--Perez--Sudarsky objection to emergent gravity is
+dangerous, now exhibited quantitatively within the model.
+
+Verdict: near-critical protection \emph{exists} (leading-log
+intercept zero; the near-critical limit is the continuum-geometry
+limit), but in the weakened logarithmic form of
+Eq.~\eqref{eq:loglaw}.
+
+\subsection{The phenomenological budget, honestly}
+
+Extrapolating Eq.~\eqref{eq:loglaw} to physical scales,
+$\delta c^2 \sim A/\ln(M_{\rm Pl}/m) \sim 10^{-3}$ even for
+ultralight composites, against multi-messenger and
+E\"otv\"os-class bounds at $10^{-15}$: twelve orders short.
+Logarithmic protection alone is phenomenologically insufficient.
+Survival requires a second layer, and the test data contain its
+candidate: the \emph{composite--composite} split.
+\textbf{Correction (v0.4):} the v0.3 claim that this split falls
+faster than $1/L$ is \emph{retracted}: it rested on
+volume-unconverged points.  A dedicated audit using an
+exact-difference reformulation ($N_P - N_{V_2} = 8 s_2 s_2'$,
+removing large-number cancellation) revealed strong, slowly
+saturating finite-volume dependence of the split
+(at $m_f a = 0.1$: $\sigma = 0.0064, 0.0173, 0.0253, 0.0265$
+for $n = 48, 64, 96, 128$).  The saturated values are
+$\sigma_\infty(0.2) = 0.036(1)$ and
+$\sigma_\infty(0.1) = 0.027(1)$, giving a per-halving ratio
+$0.75(4)$---consistent with $1/L$ (predicts $0.70$) and
+$\sqrt{m}$ ($0.71$), excluding $1/L^2$ and linear $m$ ($0.50$).
+The composite--composite split therefore falls only
+\emph{logarithmically}, like the composite--fermion split, with
+$A_{PV} \simeq 0.06$; extrapolation to physical scales leaves
+$\sim 4\times10^{-4}$, eleven orders above the $10^{-15}$
+bounds.  \textbf{At the one-loop (free-bubble) level of the
+present computation, leg~(2) of the trichotomy fails: no
+second-layer power-law protection is visible.}
+The remaining out is genuine but uncomputed: the present cones
+are built from free-fermion bubbles, whereas near criticality the
+composite sector is strongly interacting, and emergent-symmetry
+mechanisms at interacting fixed points---precisely what one-loop
+misses---are the known route by which irrelevant anisotropies can
+acquire faster decay.  Whether the interacting theory rescues
+leg~(2) is now the sharpest open question of the programme.
+
+\subsection{Survival trichotomy (all three required)}
+
+\begin{enumerate}
+\item \textbf{Standard-Model matter must embed as composites.}
+The observable cone comparisons (graviton vs.\ photon vs.\
+matter) are then composite--composite; the substrate-fermion cone
+drops out of observables.  The LIV analysis thereby upgrades
+``SM as composites'' from an aesthetic choice to a
+\emph{structural requirement} of the programme.
+\item \textbf{Composite--composite splits must run below
+$10^{-15}$} at observable scales.  This requires a dedicated
+error-controlled measurement of the $P$--$V$ split scaling law:
+same-footing speed definitions for all species, finite-difference
+extrapolation, larger volumes, lighter masses.  This is the
+highest-priority computation exposed by the test.
+\item \textbf{The substrate fermion must be unobservable as a
+propagating species} at accessible energies (dark substrate),
+so that its $\mathcal{O}(10^{-3})$ cone mismatch is not an
+observable LIV.
+\end{enumerate}
+Failure of any leg is falsification-grade for the programme.
+
+\subsection{Relation to the internal-dimension hypothesis}
+
+Two connections.  First, the conjecture of this section and the
+internal-dimension hypothesis of Sections~\ref{sec:dict}%
+--\ref{sec:test} are the same kind of statement: both assert
+that structures invisible at the lattice scale (a continuum
+geometry; an internal spectrum) organize the low-energy theory,
+and both are given pre-registered quantitative forms that can
+fail.  The naive power-law form of the present conjecture
+\emph{did} fail; its surviving logarithmic form is the sharper
+object.  Second, the intuition that lattice sites are not points
+but carry extension (``the site is a line, not a point'') is,
+in its controllable form, \emph{identical} to the
+internal-dimension hypothesis: a site carrying a continuous
+internal interval is the $N \to \infty$ limit of the $N$-layer
+internal lattice of Section~\ref{sec:dict}, and its observable
+signature is the same tower structure gated by the same spectral
+test.  Claims about site extension that do not modify any
+computable (spectrum, cone splits, couplings) are presentational
+and carry no evidential weight.  One genuinely open question is
+recorded, without any supporting computation: whether internal
+site structure modifies the matching-coefficient mechanism and
+hence the $1/\log$ law of Eq.~\eqref{eq:loglaw}; there is at
+present no reason to expect improvement, since additional
+ultraviolet structure generically adds to, rather than removes,
+cutoff-scale anisotropy.
+
+
+% ===================================================================
+\section{Matter as topology: the $S^3$ extension and its gauntlet}
+\label{sec:s3}
+% ===================================================================
+
+A topological audit of the minimal chiral pair closes one door and
+opens a specific other.  The minimal model's vacuum manifold is the
+chiral circle $S^1$, and $\pi_2(S^1) = \pi_3(S^1) = 0$:
+\emph{point-like solitonic matter does not exist in the minimal
+model}---its topological inventory contains only strings
+($\pi_1 = \mathbb{Z}$) and, under the Wilson tilt, domain walls,
+both cosmological liabilities rather than matter candidates.
+If matter is to be a stable localized structure of the condensate,
+the vacuum manifold must be enlarged; the minimal enlargement with
+$\pi_3 = \mathbb{Z}$ is $S^3$, realized by the flavor-$SU(2)$
+chiral pair
+\begin{equation}
+\mathcal{L}_{\rm int} = \frac{G}{2N}\Bigl[(\bar\psi\psi)^2
++ \sum_a (\bar\psi\, i\gamma_5\tau^a\psi)^2\Bigr],
+\qquad (\sigma,\vec\pi) \in S^3,
+\label{eq:su2pair}
+\end{equation}
+with skyrmionic matter (mass $=$ trapped energy, conserved charge
+$=$ winding number, both induced from the fermion determinant as
+in the Skyrme literature) and, as a bonus, $\pi_1(S^3) = 0$
+removing the cosmic-string liability of the $S^1$ model.
+This is the controlled form of the ``matter as a bubble of the
+condensate'' intuition, and it links to the internal-structure
+hypothesis of this note: topology \emph{requires} a condensate
+with more internal structure than the minimal pair if the model is
+to contain matter at all.
+
+The extension was passed through the same machine-verified Fierz
+gauntlet that excluded the universal coupling (particle--hole
+exchange weights and exact pairing decomposition, residual
+$10^{-14}$).  Verdicts:
+(i) the topological gains stand and are $N$-independent;
+(ii) the hope that flavor Fierz regenerates a vector coupling is
+dead---the induced vector-singlet coupling is \emph{repulsive}
+(exchange weight $+0.50$), so the $G_V$ orphan problem is not
+solved here;
+(iii) the $S^1$ model's pairing \emph{sign protection is lost}:
+the axial-diquark (flavor singlet and $\tau_{1,3}$) and
+tensor-diquark ($\tau_2$) coefficients turn positive
+($+0.25$, $+0.50$) against positive pair bubbles.  The
+normalizations are now pinned (machine-verified Wick factor $2$
+for diagonal pair components; anomalous-equals-normal bubble
+identity verified in the tensor channel to $10^{-4}$), giving the
+criticality condition $N < N_{\rm crit} = 2\,G_{\rm op}\,c_i
+T_i$ with the operating point at the $S^3$ condensate's own
+criticality ($G_{\rm op} = G_c/2$ from the isospin doubling of
+the tadpole).  Result: $N_{\rm crit} < 1$ in both the gap and
+bubble conventions---the vacuum is \emph{magnitude-safe at every
+$N \geq 1$}.  The thinnest margin is the tensor diquark at
+$N = 1$: $1.4\times$ (gap convention) to $2.8\times$ (bubble
+convention), where $1/N$ corrections are uncontrolled, so
+$N \geq 2$ ($\geq 2.9\times$ everywhere) is the robust domain
+and $N = 1$ is admissible but thin;
+(iv) an attractive tensor-singlet particle--hole coupling appears
+at $\mathcal{O}(G/N)$, subcritical by a factor $\gtrsim 3$ at any
+$N \geq 1$;
+(v) Eq.~\eqref{eq:su2pair} is not $U(1)_A$-symmetric, so the
+dark-energy axion identification of the companion programme must
+be re-audited in this extension (a $U(2)\times U(2)$ completion
+would require its own gauntlet pass).
+\textbf{Correction (v0.20), superseding the v0.18 entry.}  The
+earlier ``positive, stable across masses and schemes''
+$\kappa$ result is retracted: it was a fit-leakage artifact---the
+box-only diagram set is chirally incomplete (nonvanishing
+zero-momentum amplitude) and a fit basis lacking a constant term
+leaked that amplitude into the $k^4$ coefficient, mimicking even
+the expected chiral-log growth.  The corrected, chirally complete
+measurement (five diagram classes; pointwise $A_0 \equiv 0$ at
+machine precision; Ward-anchored normalization; five-point mass
+scan; two evaluators, two integrators) is now closed in exact
+form,
+\begin{equation}
+\kappa_U \;=\; -\frac{17}{1152\pi^2} \;=\; -0.0014952,
+\end{equation}
+confirmed under Pauli--Villars regularization and agreeing with
+the Monte-Carlo value to $0.3\%$.  The sign is \emph{negative}:
+the quartic-gradient term is anti-Derrick at one loop, and this
+note's stabilization claims built on $\kappa > 0$ are withdrawn
+below (S2-1, Gate 3).
+\emph{The constructive replacement.}  Stabilization is
+transferred to a channel this note's own Gate-0 audit already
+recorded: the $U(3)$ interaction's particle--hole exchange
+contains exactly one nonzero channel, a \emph{repulsive}
+vector/axial singlet pair.  The Fierz identity is now pinned with
+anchors and full-tensor reconstruction ($G_\omega = -G/N$ in the
+companion convention: Walecka-repulsive, pure vector-singlet, the
+flavor octet vanishing identically), and the channel has been
+Hubbard--Stratonovich dynamized with all four health gates
+passing: induced kinetic $Z_\omega > 0$; non-tachyonic
+$M_\omega^2 = 1/(g_0 Z_\omega) > 0$; WZW/Goldstone--Wilczek--anchored topological-current coupling
+$g_{\omega B} = Z_\omega^{-1/2} \neq 0$
+($c_{\rm GW} = 1$ reproduced); and a static
+kernel $D_{00}(0,q) > 0$ for all $q$---the repulsive branch's RPA
+denominator $1 + g_0\Pi_V$ is positive definite, the exact mirror
+of the attractive channel's critical denominator.
+\emph{Provenance status (v0.22).}  Of these, only the
+Goldstone--Wilczek normalization ($c_{\rm GW} = 1$) currently has
+migrated, independently re-runnable artifacts in this paper's
+repository; the $Z_\omega$, $M_\omega^2$, $D_{00}$ and Fierz
+($G_\omega = -G/N$) results reside in a legacy branch whose scope
+is mixed with the companion vector and dark-matter papers, and
+await scope-separated migration and independent review.  They are
+therefore recorded here as \emph{computed but not yet
+independently certified}---a distinction this note takes
+seriously, since the retraction above was itself caused by an
+uncaught fit artifact in numbers that had looked stable.  In the \emph{local heavy-vector limit} the truncated landscape
+$E(R) = AR - |B|/R + C/R^3$ possesses a unique stable minimum for
+any $C > 0$; the full $\omega$ response is the nonlocal kernel
+$E_\omega = \tfrac{g_{\omega B}^2}{2}\int B^0 D_{00} B^0$, and the
+decisive, registered continuum gate is the full nonlocal radius
+scan: $R_\star \gg a$ with $E''(R_\star) > 0$ (a cutoff-scale
+minimum would be a lattice lump, not continuum topological
+matter).  Soliton existence is \emph{not} claimed here; it is
+re-scoped onto this $\omega$-stabilized landscape pending that
+gate.
+The final gate, the axion re-audit, is now closed---by
+superseding Eq.~\eqref{eq:su2pair} rather than repairing it.
+The dark-energy programme requires the $U(1)_A$ breaking to be
+\emph{soft} (topological only), whereas Eq.~\eqref{eq:su2pair}
+breaks it at tree level with $\mathcal{O}(G)$ strength, giving
+the would-be axion a cutoff-scale mass.  The minimal cure is the
+classically $U(2)\times U(2)$-symmetric interaction
+\begin{equation}
+\mathcal{L}_{\rm int} = \frac{G}{2N}\Bigl[(\bar\psi\psi)^2
++ (\bar\psi i\gamma_5\psi)^2
++ (\bar\psi\tau^a\psi)^2
++ (\bar\psi i\gamma_5\tau^a\psi)^2\Bigr],
+\label{eq:u2pair}
+\end{equation}
+whose vacuum manifold is $U(2) \cong (S^1\times S^3)/\mathbb{Z}_2$:
+the $S^3$ factor retains skyrmionic matter
+($\pi_3(U(2)) = \mathbb{Z}$) while the $S^1$ factor restores the
+$\eta$-like angular mode as a tree-level Goldstone whose mass
+arises only from the topological sector, exactly the structure the
+dark-energy identification requires.
+The machine gauntlet passes Eq.~\eqref{eq:u2pair} \emph{more
+cleanly than the $S^3$ model}: particle--hole exchange weights are
+zero or repulsive in every channel (the attractive tensor-singlet
+of the $S^3$ case cancels away, and the vector-singlet exchange is
+repulsive, raising the condensation wall); the exact pairing
+decomposition (residual $10^{-14}$) contains only axial diquarks
+($c = +0.5$; the $S^3$ model's thinnest channel, the tensor
+diquark, and the classic scalar diquark are both identically
+absent), with pinned margins $N_{\rm crit} = 0.56$ (gap
+convention) and $0.29$ (bubble convention): magnitude-safe at
+every $N \geq 1$, with $N=1$ margins $1.8$--$3.5\times$.
+Two liabilities are inherited, not created: $\pi_1(U(2)) =
+\mathbb{Z}$ restores the axionic-string sector that the $S^1$
+model always had (the axion defect-cosmology audit remains an
+open dark-energy--paper item), and the Wilson issue is now sharpened from contamination to
+absence: at the operating point the pseudoscalar channels are
+bubble-supercritical on the Wilson lattice, so the dark-energy
+mechanism exists only in a Ginsparg--Wilson discretization---an
+existence condition, not an improvement item (quantified in the
+dark-energy paper, v5.2).
+\textbf{Model ladder verdict: $S^1$ (no matter) $\to$ $S^3$ (no
+axion) $\to$ $U(2)$ (both), with the $U(2)$ interaction
+Eq.~\eqref{eq:u2pair} the surviving minimal candidate; a $U(3)$
+triadic extension (color-like selection structure and baryonic
+topology) is recorded as a gated seed in
+Section~\ref{sec:u3seed}.}
+
+
+% ===================================================================
+\section{$U(3)$ triadic extension (seed)}
+\label{sec:u3seed}
+% ===================================================================
+
+\subsection*{Retirement of the old mechanism, with reasons}
+An earlier manuscript of this programme (the unified-interactions
+draft, 2025) proposed that three flavor-\emph{diagonal} vector
+currents $J^{(i)}_\mu = \bar\psi_i\gamma_\mu\psi_i$ generate the
+$SU(3)$ algebra through non-vanishing commutators, with
+confinement following from the phase constraint
+$\sum_i\theta_i = 0$.  That mechanism is retired on documented
+grounds: diagonal flavor currents commute, generating only the
+Cartan $U(1)^2$, so the claimed algebra was never derived; the
+identification of composite vectors with massless gauge fields
+was unaddressed (and is now known to face the binding-window and
+masslessness obstructions quantified in the vector-channel
+paper); and the confinement argument conflated the divergent
+energy of an isolated charge with a Wilson-loop area law, without
+a mechanism.
+
+\subsection*{The repositioned hypothesis}
+What survives is a different and better question, made live by
+the present programme's own results: whether the condensate's
+\emph{internal order-parameter geometry} extends from $U(2)$ to
+\begin{equation}
+U(3) \cong \bigl(U(1)\times SU(3)\bigr)/\mathbb{Z}_3,
+\qquad \pi_1 = \mathbb{Z},\ \ \pi_2 = 0,\ \ \pi_3 = \mathbb{Z},
+\end{equation}
+realized microscopically by an $N_f = 3$,
+$U(3)\times U(3)$-symmetric chiral interaction (the direct
+generalization of Eq.~\eqref{eq:u2pair}).  In this framing the
+old triadic-closure intuition acquires a precise and
+\emph{structural} meaning: $\sum_i\theta_i = 0$ is the
+tracelessness of the $SU(3)$ factor in the $U(3)$ decomposition,
+with the singlet (axion) direction carrying the trace---the
+constraint is not imposed but automatic.  Baryon number is the
+$\pi_3(SU(3)) = \mathbb{Z}$ winding; color-like quantum numbers
+label non-singlet order-parameter excitations; and the honest
+expectation for ``confinement'' is a \emph{selection structure}
+(non-singlet excitations gapped and non-propagating, finite
+energy only for singlet windings), not QCD confinement of
+constituents.
+
+\subsection*{Gates (pre-registered)}
+\begin{enumerate}
+\item[0.] \textbf{Realization gate}: the
+$U(3)\times U(3)$ interaction at $N_f = 3$ must pass the machine
+gauntlet (exact $U(1)_A$ and $SU(3)_A$; particle--hole exchange
+zero/repulsive in physical channels; pairing content
+absent or protected), as its $U(2)$ predecessor did.  All other
+gates are conditional on this one.
+\item[1.] \textbf{Topology gate}: verify the homotopy content
+above and its compatibility with the $U(2)$ ladder
+($\pi_4(SU(3)) = 0$: baryon spin-statistics must then come
+entirely from the Wess--Zumino--Witten term).
+\item[2.] \textbf{Triadic-closure gate}: confirm the
+tracelessness reading against the microscopic model (Cartan
+torus vs.\ full non-abelian order); a purely $U(1)^2$ realization
+fails this gate.
+\item[3.] \textbf{Skyrme/WZW gate (re-scoped v0.20)}: originally
+$\kappa_{\rm Skyrme} > 0$; the measured negative $\kappa_U$
+re-scopes the stabilization clause to the endogenous-$\omega$
+landscape ($R_\star \gg a$), while the WZW/level half is
+unaffected.
+\item[4.] \textbf{Confinement-structure gate}: a hard criterion
+for the selection structure (e.g.\ energetic exclusion of
+non-singlet asymptotic excitations), stated so that it can fail;
+assertions of area laws are not admissible evidence.
+\item[5.] \textbf{$U(2)$-compatibility gate}: the axion
+direction, matter topology, pairing safety, and the
+chiral-discretization requirement must survive the embedding
+unchanged.
+\end{enumerate}
+\textbf{Gate status (v0.11).}  Gate~0 is \emph{passed}: the
+$N_f = 3$, $U(3)\times U(3)$ interaction is machine-verified
+exactly $U(1)_A$- and $SU(3)_A$-invariant; its particle--hole
+exchange weights are zero in every channel except a repulsive
+vector/axial singlet pair (the chiral multiplet receives no shift
+at all)---the channel since dynamized as the endogenous
+$\omega$ (v0.20 correction note); and its exact pairing decomposition (complete
+$66$-channel basis, residual $10^{-14}$) contains only an
+axial-diquark flavor-$\mathbf{6}$ at $+1/2$
+(magnitude-protected: $N_{\rm crit} = 0.17$--$0.48$ across the
+overlap/Wilson bubble conventions, safe at every $N \geq 1$ with
+margin $2$--$6\times$) and a \emph{repulsive} vector-diquark
+flavor-$\bar{\mathbf{3}}$; scalar-, pseudoscalar-, and
+tensor-diquark content is identically absent, so no diquark
+condensation route exists.
+Gate~1 is bookwork ($\pi_3 = \mathbb{Z}$, $\pi_4(SU(3)) = 0$
+placing baryon statistics entirely on the WZW term); Gate~2 is
+realized structurally by the $U(3)\times U(3) \to U(3)_V$ order
+parameter (tracelessness automatic).  Gate~3's first half is now \emph{passed} by a machine-sealed
+embedding argument: the standard $SU(3)$ skyrmion is the Witten
+embedding $U = {\rm diag}(U_2, 1)$, whose Maurer--Cartan form has
+identically vanishing linear-order projection onto
+$\lambda_{4\ldots 8}$ (verified with quadratic-in-$d\phi$
+residual scaling) and whose flavor traces coincide exactly with
+the $SU(2)$ ones; hence
+$\kappa_{\rm Skyrme}^{SU(3),\,{\rm emb}} =
+\kappa_{\rm Skyrme}^{SU(2)}$---the embedding identity survives
+unchanged, but the inherited value is now the exact
+\emph{negative} $-17/(1152\pi^2)$ (v0.20 correction above):
+quartic Derrick stabilization is absent, and Gate~3's
+stabilization clause is re-scoped to the $\omega$-stabilized
+landscape with $R_\star \gg a$ as its quantitative criterion.  The second half---the level---is now anchored by a
+nonperturbative machine computation: the spectral flow of the
+lattice Dirac Hamiltonian under adiabatic hedgehog creation
+(Sylvester-inertia counting of negative levels, Wilson term,
+Kahana--Ripka regime $mR \gtrsim 5$) gives net flow $= +1$ for
+winding~$1$ (stable on the inter-sector plateau) and $= +2$ for
+winding~$2$ at the winding-completion point: the induced baryon
+number is winding-proportional with coefficient exactly $1$ per
+Dirac species, i.e.\ the Goldstone--Wilczek level is $1$ per
+species and the total level is $N$.  (Finite-size threshold
+offsets in the crossing locations and the heavy masses used,
+$ma = 1.4$--$2.0$, do not affect the integer counting; the full
+five-form WZW quantization and the spin-statistics linkage then
+follow by the standard consistency argument, cited rather than
+machine-verified.)  The stake is thereby placed on computed
+ground: \emph{baryons are fermionic iff $N$ is odd}---the species
+number is no longer a free parameter but is constrained by
+baryonic statistics.
+Gate~4 is now resolved by a three-tier criterion with honest
+verdicts (v0.15).
+\emph{Gate 4A-weak: PASS} --- open (non-closed) color-phase
+configurations carry angular gradients $\partial U \sim 1/r$ at
+infinity and hence linearly divergent energy, so only closed,
+constant-at-infinity configurations are finite-energy matter
+candidates; combined with $\pi_3 = \mathbb{Z}$,
+$\kappa_{\rm Skyrme} > 0$, and level $= N$, closed baryonic
+winding is finite-energy and topologically protected.
+\emph{Gate 4A-strong: NOT PASSED} --- finite energy does not
+exclude non-singlet global orientations.
+\emph{Gate 4B: FAIL for the global theory} --- collective
+quantization of the skyrmion's $SU(3)$ orientation produces a
+rotor spectrum of finite-energy multiplets
+($E \sim M + C_2(R)/2\mathcal{I}$), so the physical Hilbert
+space is not singlet-only.  The correct reading is
+classificatory: the $U(3)$ seed as it stands is a
+\emph{flavor-like} structure delivering baryonic topology and
+multiplet spectroscopy; ``color confinement'' is removed from
+its claims, and its possible restoration is recorded as a fork
+with stated costs (fundamental gauge fields abandon the
+substrate-only premise; emergent gauge redundancy faces the
+vector-channel binding obstruction).
+\emph{Gate 4C} (flux/area law) is deferred as a future stronger
+test, meaningful only past the fork.
+One productive corollary of the 4B failure: the WZW term
+constrains the allowed rotor representations
+(Guadagnini-type quantization, reps containing hypercharge
+$N/3$), so the multiplet content is an $N$-dependent
+\emph{prediction}: $N = 3$ selects octet/decuplet-like
+spectroscopy while also satisfying the odd-$N$ fermionic-baryon
+constraint---the second independent place the species number is
+physically pinned.  The quantization-condition check is now complete
+(machine-verified enumeration): with level $k = N$ from the
+spectral-flow computation, the Guadagnini--Witten constraint
+$Y_R = N/3$ selects minimal representations $p + 2q = N$, giving
+$\mathbf{3}_{1/2}$ at $N{=}1$;
+$\bar{\mathbf{3}}_0 \oplus \mathbf{6}_1$ at $N{=}2$; and
+$\mathbf{8}_{1/2} \oplus \mathbf{10}_{3/2}$ at $N{=}3$---the
+QCD-like octet/decuplet appearing first and only at $N = 3$.
+An internal consistency check passes automatically:
+$p \equiv N \pmod 2$ forces half-integer rotor spin exactly when
+$N$ is odd, so the spectroscopic and statistics constraints on
+$N$ are redundantly coherent.  \textbf{The species number is
+thereby pinned from three directions: WZW level, fermionic
+baryon statistics, and octet/decuplet spectroscopy---all
+selecting $N = 3$.}
+Caveats, attached permanently: the rigid-rotor quantization
+assumes finite moments of inertia from the induced Skyrme+WZW
+Lagrangian (not yet computed); the selection is conditional---%
+\emph{if} the substrate's baryonic windings are to reproduce
+observed baryon spectroscopy, then $N = 3$---and the
+identification with physical baryons requires the
+Standard-Model-embedding step that leg~(1) of the
+Lorentz-invariance trichotomy independently demands.
+The $U(3)$ seed's mature claim is accordingly: \emph{baryonic
+topology with $N = 3$ selection}, not confinement.
+\emph{Spectral-test anchor (v0.14).}  The overlap $\sigma$-pole
+scan across $m_{\rm dyn} a = 0.1$--$0.4$ measures
+$m_\sigma/(2m_{\rm dyn}) = 1 - 0.98\,(m_{\rm dyn}a)
++ 0.72\,(m_{\rm dyn}a)^2$ (five points, residuals
+$\leq 0.007$, volume systematic $0.7\%$): the chiral-limit
+intercept is unity within errors, recovering the continuum
+relation $m_\sigma = 2m_{\rm dyn}$ exactly, with the lattice
+correction now a measured law.  Together with the exact Goldstone
+$m_\pi = 0$, the mass side of the spectral test of
+Section~\ref{sec:test} is fully anchored; the coupling gate
+remains its outstanding requirement.
+Verdict discipline: this section is a seed; no companion paper is
+opened until Gates 3--4 also have first results.
+
+
+% ===================================================================
+\section{The $S^2$ layer: orientation sector and emergent
+$U(1)$ connection (gated seed)}
+\label{sec:s2seed}
+% ===================================================================
+
+The Hopf fibration $S^1 \to S^3 \to S^2$ identifies a middle layer
+of the ladder that is \emph{not a new rung}: by the Vafa--Witten
+theorem, vector symmetries of the substrate do not break
+spontaneously, so $S^2 = SU(2)/U(1)$ is unavailable as a vacuum
+manifold of a new condensate; instead, $S^2 \cong \mathbb{CP}^1$
+is the \emph{directional quotient of the already-adopted $U(2)$
+model's chiral field}---writing the $SU(2)$ sector as a normalized
+spinor $z$ with $\vec n = z^\dagger\vec\sigma z$, the layer comes
+with a composite Berry connection
+$a_\mu = -i z^\dagger\partial_\mu z$,
+$f_{\mu\nu} \sim \vec n\cdot(\partial_\mu\vec n\times
+\partial_\nu\vec n)$, at no cost in new degrees of freedom.
+Its honest physics menu: bosonic orientation modes; monopole
+($\pi_2 = \mathbb{Z}$) and Hopfion ($\pi_3(S^2) = \mathbb{Z}$)
+topology; and a photon-\emph{candidate} connection that is
+emphatically not yet a photon.
+
+Gates, pre-registered:
+\begin{enumerate}
+\item[S2-1.] \textbf{Induced kinetic term: FAILED as originally
+stated (v0.20).}  The inheritance identity itself is intact and
+machine-exact ($[L_\mu,L_\nu] = -2i(\vec n\cdot\vec\tau)
+f_{\mu\nu}$, so the layer-restricted Skyrme term \emph{is} the
+Berry--Maxwell term), but the inherited sign has flipped: with
+the corrected $\kappa_U = -17/(1152\pi^2) < 0$ the induced
+Berry--Maxwell coefficient is \emph{negative}---a wrong-sign
+kinetic term for the photon candidate at one loop.  The
+Vakulenko--Kapitanskii Hopfion-stabilization bonus is withdrawn
+with it.  Recorded outs, uncomputed: contributions to the Berry
+kinetic term beyond the layer-restricted quartic; and the
+demonstrated fact that not every composite vector is poisoned
+(the isoscalar $\bar\psi\gamma^\mu\psi$ channel's induced
+kinetic term is healthy, $Z_V > 0$---the ghost is specific to
+the $\mathbb{CP}^1$ Berry connection).  Gate S2-2's
+Coulomb-phase framing is moot in its current form until S2-1 is
+resolved.
+A framing correction is recorded alongside: masslessness in this
+programme has three distinct protections---Goldstone (the
+$\vec\pi,\eta$ modes), gauge redundancy (the $a_\mu$
+candidate, whose only breach is the monopole gate S2-2), and
+none for solitons, whose masses \emph{are} their topological
+energies; ``$S^2$ massless vs $S^3$ massive'' is a category
+comparison between a connection and a soliton, not between
+manifolds.
+\item[S2-2.] \textbf{The monopole gate (central): restated
+(v0.22), and its Coulomb-side resolution retracted.}
+The gate's earlier statement---that in $3{+}1$D a compact
+emergent $U(1)$ with dynamical monopoles is ``generically gapped
+by the Polyakov-class mechanism''---was wrong, and is corrected
+here following the companion dark-energy paper's round-one
+review.  Polyakov's monopole-plasma gapping is a $2{+}1$D
+(three-dimensional Euclidean) result; in $3{+}1$D compact $U(1)$
+possesses a genuine \emph{Coulomb phase} at weak coupling, with
+an \emph{exactly} massless photon protected by the phase itself
+(Guth), and monopole condensation---hence gapping and
+confinement---occurs only on the strong-coupling side of a phase
+transition.  The gate is therefore not ``exhibit a suppression
+mechanism or lose the photon'' but a \emph{phase question}: does
+the emergent compact $U(1)$ of this layer sit on the Coulomb or
+the confining side?
+The answer that v5.6--v5.8 of the companion paper recorded on the
+Coulomb side is \textbf{retracted}: it rested on the superseded
+(fit-leakage) $\kappa$ numbers of the July-8 run.  With the
+corrected coefficient the relevant arithmetic runs the other way.
+The same monopole-loop action that the companion paper's
+dark-energy chain required, expressed through the measured
+coefficient, is
+\begin{equation}
+S_{\rm mono} \;=\; 640\,\kappa_U \;=\; -\frac{85}{9\pi^2}
+\;=\; -0.95 ,
+\end{equation}
+against a required window $[140, 550]$: the pre-registered
+criterion fired, and the companion paper records the termination
+of that chain.  The reading relevant \emph{here} is the physical
+one and survives the sign: the substrate's quartic resistance to
+orientation twisting is of ordinary one-loop (Gasser--Leutwyler)
+strength, $|S_{\rm mono}| \sim 1$, so monopoles in this layer are
+\emph{cheap} and topological events dense rather than
+exponentially rare.  This sector supplies no diluteness of its
+own; a Coulomb-phase claim would have to come from elsewhere.
+All of which is, in the present state, \emph{moot}: the
+Coulomb-versus-confined question presupposes a Maxwell term whose
+sign is right, and S2-1 reports that at one loop it is not.  The
+gate is suspended behind S2-1 rather than answered, and remains
+stated so that it can fail.
+\item[S2-3.] \textbf{The $\eta$--Hopf coupling (dark-energy
+payoff)}: whether the fermion determinant couples the angular mode
+to the Hopf density $f\wedge f$ of the Berry connection is a
+well-posed derivative-expansion question; if yes, Hopfion
+topological fluctuations of the orientation sector constitute a
+\emph{third} candidate source for the dark-energy paper's
+re-scoped topological susceptibility, distinct from both the
+(disfavored) channel-composite gauge sector and the gravitational
+$R\tilde R$ route.
+\item[S2-4.] \textbf{Compatibility}: the layer must not disturb
+the $U(2)$ model's verified protections (it introduces no new
+operators, so this is expected but must be checked where the
+$\mathbb{CP}^1$ decomposition interacts with the Wilson/overlap
+discretization).
+\end{enumerate}
+No claims are attached to this section beyond the existence of the
+decomposition; in particular ``$S^2$ = photon'' is explicitly not
+asserted, and the layer's value is conditional on Gates S2-1
+through S2-3.
+
+% ===================================================================
+\section{Gates and next actions}
+\label{sec:gates}
+% ===================================================================
+
+\begin{enumerate}
+\item \textbf{Fierz arithmetic: COMPLETED (v0.19 status), with the
+opposite of the anticipated outcome.}  The machine-verified
+decomposition of the minimal chiral pair yields identically zero
+vector and axial couplings by Fierz exchange (and a repulsive
+tensor), so the cross-channel ratios $G_V/G_S$, $G_A/G_S$ are
+\emph{not} Fierz-inherited; in the adopted invariant-universal
+model they are fixed by the single-coupling economy postulate
+instead ($G_V = G_A = G_\chi$), which is a model assumption, not
+an output.  The Aoki-risk sub-question (b) is resolved by the
+frame requirement: the operating-point analysis must be performed
+in the overlap discretization, where the $S/P$ sector is exactly
+degenerate and healthy.
+\item \textbf{Chirally clean scalar extraction: COMPLETED.}
+Overlap true-pole scan; $m_\sigma$ law measured with chiral-limit
+intercept $1.000(10)$ (Sections~\ref{sec:partial}
+and~\ref{sec:u3seed}).
+\item \textbf{Ratio-fit design (re-scoped).}  Before the
+$N \le 5$ fit of Section~\ref{sec:test} can run, the state list
+must be settled under the invariant-universal coupling and the
+vector-state caveat: at $G = G_\chi$ the vector channel has no
+below-threshold state (companion vector paper), so the candidate
+tower presently consists of $m_\pi = 0$, $m_\sigma$, and
+whatever the $V/A$ sector contributes on the resonance side.
+Whether a two-to-three--state tower constitutes a meaningful test
+(kill criterion (ii) of Section~\ref{sec:test} is close to
+triggering) is the design question to resolve first; if it
+triggers, the negative result is recorded per the version
+discipline below.
+\item \textbf{Composite--composite cone precision campaign}
+(unchanged; programme-level priority, independent of the tower
+test): resolve the $P$--$V$ split scaling law below the current
+systematic floor (Section~\ref{sec:epgeom}) at the interacting
+level.  This gates leg~(2) of the survival trichotomy and
+therefore the viability of the entire programme against
+Lorentz-invariance bounds.
+\end{enumerate}
+
+\workingnote{The dark-energy scale $\Lambda_{\mathrm{DE}}$ is
+deliberately excluded from the tower: it is exponentially
+suppressed instanton physics ($\Lambda^4 e^{-S}$), a different
+mechanism from any $1/(Nb)$ spectrum, and no small-$N$ tower spans
+thirty decades. Do not let future drafts re-import it.}
+
+\workingnote{Version discipline: this note becomes ``Paper 5
+v1.0'' only if and when the spectral test runs and passes.
+If the test fails, the negative result is still worth a short
+note --- constraint on the internal structure of the condensate
+--- consistent with the programme's honesty-first policy.}
+
+\end{document}

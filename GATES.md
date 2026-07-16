@@ -51,15 +51,15 @@ Legacy accepted record: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -134,15 +134,15 @@ Legacy accepted record: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -217,15 +217,15 @@ Legacy definitive check: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -250,6 +250,78 @@ Source commit `4a0de1e2d6875f0ac27907395b3fc28b6bd7ce25`, finalized at `cba89de4
 ### Date closed
 
 2026-07-13 (legacy record).
+
+## P5-OMEGA-01 — Scope-separated omega-channel health gate
+
+Status: PROPOSED
+
+### Scientific question
+
+Do the four omega health gates survive scope-separated re-derivation?
+
+### Scope
+
+Paper 5-facing checks of `Z_omega`, `M_omega^2`, `g_omegaB`, and `D_00`, together with the upstream Fierz pinning `G_omega=-G/N`. Paper 1 dark-matter framing and Paper 3 vector-sector authority are excluded.
+
+### Locked assumptions
+
+None locked. PI scope separation and applicable conventions are required before specification.
+
+### Inputs
+
+Paper 5 v0.22 and the mixed legacy branch `legacy-kappa/topo-mass-radius` as an unaudited reference only. No omega production artifacts from that branch are migrated here.
+
+### Analytic anchors
+
+The separable `c_GW=1` result at P5-GW-01 is the only supported upstream anchor in this repository; it does not establish the omega health claims.
+
+### Regression anchors
+
+None registered.
+
+### Kill criterion
+
+The continuum nonlocal radius scan must give `R_star >> a` with `E''(R_star) > 0`; a cutoff-scale minimum is a lattice lump, not continuum topological matter.
+
+### Required computations
+
+Scope-separated re-derivation of the Fierz pinning, induced kinetic coefficient, mass, topological-current coupling, static kernel, and full nonlocal radius scan.
+
+### Required deliverables
+
+Committed derivation notes, locked conventions, scripts, tests, regression anchors, immutable outputs, provenance, and an independent review verdict.
+
+### Result
+
+Not run in this repository.
+
+### Reviewer verdict
+
+PENDING
+
+### Consequences
+
+P5-CL-009 through P5-CL-013 remain `PROPOSED`; no omega-channel health or continuum-stabilization claim is supported here.
+
+### Repository branch
+
+Future `gate/p5-omega-01` branch after PI scope approval.
+
+### Relevant files
+
+`paper/paper5_internal_dimension_v0_22.tex`; `CLAIMS.md`; `MIGRATION.md`.
+
+### Migration provenance
+
+Legacy branch `legacy-kappa/topo-mass-radius`; classified as scope-mixed and not migrated during this sweep.
+
+### Date opened
+
+2026-07-16
+
+### Date closed
+
+Open.
 ## P5-C2A-04 — Regulator and PV sign confirmation
 
 Status: PASS
@@ -300,15 +372,15 @@ Legacy Task B: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 
@@ -383,15 +455,15 @@ Legacy hard gate: PASS. Destination migration review pending.
 
 ### Independent reviewer verdict
 
-PENDING
+PASS — independently reproduced by Claude on 2026-07-16.
 
 ### PI acceptance
 
-PENDING
+ACCEPTED — 2026-07-16.
 
 ### Claim-promotion status
 
-Not eligible for VERIFIED until both reviewer verdict and PI acceptance are recorded.
+COMPLETED for the associated accepted claim or claims.
 
 ### Consequences
 

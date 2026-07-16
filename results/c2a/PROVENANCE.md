@@ -11,11 +11,10 @@ Source branch/ref: `legacy-kappa/main` with exact/PV work also verified at `lega
 | `results/aggregate_output.txt` | `aggregate_output.txt` | `6210279f22693da6f7f4406509203ad8d495aa88` | Copied byte-for-byte | None |
 | `results/p6_routing_output.txt` | `p6_routing_output.txt` | `6210279f22693da6f7f4406509203ad8d495aa88` | Copied byte-for-byte | None |
 | `results/p7_slope_output.txt` | `p7_slope_output.txt` | `6210279f22693da6f7f4406509203ad8d495aa88` | Copied byte-for-byte | None |
-| `results/closed_form_output.txt` | `closed_form_output.txt` | `4a0de1e2d6875f0ac27907395b3fc28b6bd7ce25` | Copied byte-for-byte | None |
+| `results/closed_form_output.txt` | `closed_form_output.txt` | `4a0de1e2d6875f0ac27907395b3fc28b6bd7ce25` | Copied byte-for-byte | None; reproduce with `python -m scripts.c2a.derive_kappa_closed` |
 | `results/lambda_scan_output.txt` | `lambda_scan_output.txt` | `cba89de41183d08c587af5187edfbc8de659df9f` | Copied byte-for-byte | None |
 | `results/pv_signcheck_output.txt` | `pv_signcheck_output.txt` | `cba89de41183d08c587af5187edfbc8de659df9f` | Copied byte-for-byte | None |
 | `results/RESULTS_C2a.md` | `processed/RESULTS_C2a.md` | `6210279f22693da6f7f4406509203ad8d495aa88` | Copied byte-for-byte | None |
 | `results/TaskB_PV_signcheck.md` | `processed/TaskB_PV_signcheck.md` | `cba89de41183d08c587af5187edfbc8de659df9f` | Copied byte-for-byte | None |
 
 The destination README, JSON configuration, verdict, environment file, and this provenance ledger are migration metadata created on 2026-07-15. They do not alter the raw blobs. The exact source environment was unavailable and is explicitly marked as such.
-

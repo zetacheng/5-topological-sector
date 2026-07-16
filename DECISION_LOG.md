@@ -212,3 +212,42 @@ None; migration governance.
 ### Related branch and files
 
 Migration branch; `archive/LEGACY_KAPPA_C2A.md`.
+
+## 2026-07-16 — Accept C2a and Goldstone-Wilczek review verdict
+
+### Decision
+
+Accept the independent C2a and Goldstone-Wilczek review verdict and promote P5-CL-001, P5-CL-002, P5-CL-003, and P5-CL-007 to `VERIFIED`.
+
+### Reason
+
+Independent clean-environment reproduction and mutation-tested symbolic regression satisfy the repository `VERIFIED` standard.
+
+### Evidence
+
+- `reviews/claude/2026-07-16-c2a.md`
+- Branch `fix/audit-2026-07-16`
+- 15/15 tests
+- Unchanged raw artifacts
+
+### Consequences
+
+- The four claims may be cited as verified in Paper 5.
+- Omega claims may not be cited as verified.
+- P5-OMEGA-01 remains the next scope-separated migration item.
+
+### Supersedes
+
+None.
+
+### Related gate
+
+- P5-C2A-01
+- P5-C2A-02
+- P5-C2A-03
+- P5-C2A-04
+- P5-GW-01
+
+### Related branch and files
+
+`fix/audit-2026-07-16`; `CLAIMS.md`, `GATES.md`, and `reviews/claude/2026-07-16-c2a.md`.

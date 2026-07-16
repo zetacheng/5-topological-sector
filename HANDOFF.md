@@ -2,15 +2,19 @@
 
 ## Current task
 
-Paper 5 historical migration from legacy `kappa-c2a` completed and awaiting review.
+C2a and Goldstone-Wilczek gates closed, independently reviewed, and accepted.
 
 ## Status separation
 
 - Calculation and reproduction: complete.
-- Migration: complete except for the Paper 5 source, figures, and bibliography.
-- Independent scientific review: pending.
-- PI acceptance: pending.
-- Merge readiness: review-status consistency is corrected on this branch; merge remains blocked pending final independent review and PI acceptance.
+- Migration: complete including the PI-supplied Paper 5 v0.22 source; figures and bibliography remain unavailable.
+- Independent scientific review: complete.
+- PI acceptance: complete.
+- Merge readiness: accepted gates are ready for merge.
+
+## Next scientific item
+
+Scope-separated omega migration under P5-OMEGA-01.
 
 ## Scientific question
 
@@ -22,11 +26,11 @@ Inventory source SHAs; exact/PV state `cba89de41183d08c587af5187edfbc8de659df9f`
 
 ## Do not reopen
 
-Closed exact C2a gates without a documented inconsistency; the failed positive claim; cross-paper ownership decisions.
+P5-C2A-01/02/03/04 or P5-GW-01 unless a concrete inconsistency is documented; the failed positive claim; cross-paper ownership decisions.
 
 ## Required next input
 
-Independent Claude/PI review; latest Paper 5 source; ownership decision for `legacy-kappa/topo-mass-radius` and `legacy-kappa/wrinkle-bound-excitation`.
+Paper 5 figures and bibliography; PI scope approval and ownership decision for `legacy-kappa/topo-mass-radius` and `legacy-kappa/wrinkle-bound-excitation`.
 
 ## Expected Codex output
 
