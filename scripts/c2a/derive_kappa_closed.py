@@ -70,6 +70,10 @@ def ball_monomial(exps, M, m, region='R4', R=None):
         return sp.Integer(0)
     K = 3 + sum(exps)
     rad = radial_R4(K, M, m) if region == 'R4' else radial_ball(K, M, m, R)
+    if rad is None:
+        raise ValueError(
+            f"Divergent monomial exps={exps}, K={K}, M={M}, region={region}"
+        )
     return ang * rad
 
 
@@ -234,7 +238,7 @@ if __name__ == "__main__":
                 else:
                     tot += (l[0].dot(l[2]))*(l[1].dot(l[3]))
         return sp.nsimplify(tot)
-    region = sys.argv[1] if len(sys.argv) > 1 else 'R4'
+    region = sys.argv[1] if len(sys.argv) > 1 else 'ball'
     print(f"\n=== CLOSED-FORM kappa_U  (region={region}) ===")
     A4A = {}; A4B = {}
     for name in CLASSES:
