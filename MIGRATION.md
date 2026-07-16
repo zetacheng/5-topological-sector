@@ -13,11 +13,11 @@ Repository: `zetacheng/kappa-c2a`
 
 ## Paper source
 
-- [ ] latest Paper 5 source imported
+- [x] latest Paper 5 source imported
 - [ ] figures imported
 - [ ] bibliography imported
 
-The audited legacy refs contain no clean authoritative Paper 5 paper source, figure set, or bibliography.
+The audited legacy refs contain no clean authoritative Paper 5 paper source, figure set, or bibliography. The PI separately supplied `paper5_internal_dimension_v0_22.tex`, now imported under `paper/`; figures and bibliography remain unavailable.
 
 ## Scientific record
 
@@ -59,11 +59,11 @@ Ruff-plus-pytest check all passed. GitHub CI remains configured to run the same 
 
 - `legacy-kappa/topo-mass-radius` combines a Paper 5 topology question with Paper 3 omega inputs and Paper 1 dark-matter framing.
 - `legacy-kappa/wrinkle-bound-excitation` combines Paper 4 interface and Paper 1 excitation/DM framing.
-- Latest Paper 5 paper source, figures, and bibliography remain unavailable.
+- Paper 5 v0.22 source is imported; its figures and bibliography remain unavailable.
 - Destination independent Claude/PI review remains pending.
 
 ## Migration assessment
 
-`PARTIAL — REVIEW REQUIRED`: the authoritative C2a and separable Goldstone–Wilczek records are migrated and reproducible; paper-source import and ambiguous mixed-ownership classification remain open.
+`PARTIAL — REVIEW REQUIRED`: the authoritative C2a and separable Goldstone–Wilczek records are migrated and reproducible, and the PI-supplied v0.22 paper source is imported; figures, bibliography, and ambiguous mixed-ownership classification remain open.
 
 Scientific artifacts are migration-complete; formal claim acceptance and paper-source synchronization remain pending.

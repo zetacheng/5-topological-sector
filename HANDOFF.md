@@ -7,7 +7,7 @@ Paper 5 historical migration from legacy `kappa-c2a` completed and awaiting revi
 ## Status separation
 
 - Calculation and reproduction: complete.
-- Migration: complete except for the Paper 5 source, figures, and bibliography.
+- Migration: complete including the PI-supplied Paper 5 v0.22 source; figures and bibliography remain unavailable.
 - Independent scientific review: pending.
 - PI acceptance: pending.
 - Merge readiness: review-status consistency is corrected on this branch; merge remains blocked pending final independent review and PI acceptance.
@@ -26,7 +26,7 @@ Closed exact C2a gates without a documented inconsistency; the failed positive c
 
 ## Required next input
 
-Independent Claude/PI review; latest Paper 5 source; ownership decision for `legacy-kappa/topo-mass-radius` and `legacy-kappa/wrinkle-bound-excitation`.
+Independent Claude/PI review; Paper 5 figures and bibliography; ownership decision for `legacy-kappa/topo-mass-radius` and `legacy-kappa/wrinkle-bound-excitation`.
 
 ## Expected Codex output
 
