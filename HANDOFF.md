@@ -14,7 +14,7 @@ C2a and Goldstone-Wilczek gates closed, independently reviewed, and accepted.
 
 ## Next scientific item
 
-Scope-separated omega migration under P5-OMEGA-01.
+P5-OMEGA-01: whether the omega — whose existence, health and repulsive kernel are owned by the companion vector-sector paper (`zetacheng/3-vector-sector`) — stabilizes a continuum topological object. Kill criterion: `R_star >> a` and `E''(R_star) > 0`.
 
 ## Scientific question
 
