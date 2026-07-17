@@ -269,7 +269,11 @@ None locked. PI scope separation and applicable conventions are required before 
 
 ### Inputs
 
-Paper 5 v0.22 and the mixed legacy branch `legacy-kappa/topo-mass-radius` as an unaudited reference only. No omega production artifacts from that branch are migrated here.
+Paper 5 v0.23 and the scope-separated companion records in `zetacheng/3-vector-sector` as cross-repository references only. No omega production artifacts are imported into this repository.
+
+### Cross-repository caveats
+
+The four health gates hold for any `g0 > 0` and are coupling-independent. The below-threshold pole requires `g0 > 1/(4 m_f^2 Z_omega) ~ 10.6`; the artifact value `g0 = 20` is representative, not derived from `G/N`. At that coupling, `m_omega ~ 1.4 m_f`, not `m_f << m_omega << Lambda`.
 
 ### Analytic anchors
 
@@ -301,7 +305,7 @@ PENDING
 
 ### Consequences
 
-P5-CL-009 through P5-CL-013 remain `PROPOSED`; no omega-channel health or continuum-stabilization claim is supported here.
+P5-CL-009 through P5-CL-013 remain `PROPOSED` in this repository. The companion paper owns the omega existence, health, and repulsive-kernel claims; Paper 5 retains the topological-stabilization question and its continuum-radius kill criterion.
 
 ### Repository branch
 
@@ -309,11 +313,11 @@ Future `gate/p5-omega-01` branch after PI scope approval.
 
 ### Relevant files
 
-`paper/paper5_internal_dimension_v0_22.tex`; `CLAIMS.md`; `MIGRATION.md`.
+`paper/paper5_internal_dimension_v0_23.tex`; `CLAIMS.md`; `MIGRATION.md`.
 
 ### Migration provenance
 
-Legacy branch `legacy-kappa/topo-mass-radius`; classified as scope-mixed and not migrated during this sweep.
+Scope-separated companion migration in `zetacheng/3-vector-sector`: P3-FIERZ-01, P3-VEC-O1/O2/O3, and P3-OMEGA-01. Paper 5 retains references only.
 
 ### Date opened
 

@@ -7,7 +7,7 @@ C2a and Goldstone-Wilczek gates closed, independently reviewed, and accepted.
 ## Status separation
 
 - Calculation and reproduction: complete.
-- Migration: complete including the PI-supplied Paper 5 v0.22 source; figures and bibliography remain unavailable.
+- Migration: complete including the PI-supplied Paper 5 v0.23 source alongside v0.22; figures and bibliography remain unavailable.
 - Independent scientific review: complete.
 - PI acceptance: complete.
 - Merge readiness: accepted gates are ready for merge.

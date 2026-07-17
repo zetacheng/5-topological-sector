@@ -17,7 +17,7 @@ Repository: `zetacheng/kappa-c2a`
 - [ ] figures imported
 - [ ] bibliography imported
 
-The audited legacy refs contain no clean authoritative Paper 5 paper source, figure set, or bibliography. The PI separately supplied `paper5_internal_dimension_v0_22.tex`, now imported under `paper/`; figures and bibliography remain unavailable.
+The audited legacy refs contain no clean authoritative Paper 5 paper source, figure set, or bibliography. The PI separately supplied `paper5_internal_dimension_v0_23.tex`, now imported under `paper/` alongside v0.22; figures and bibliography remain unavailable.
 
 ## Scientific record
 
@@ -57,10 +57,9 @@ Ruff-plus-pytest check all passed. GitHub CI remains configured to run the same 
 
 ## Unresolved review items
 
-- `legacy-kappa/topo-mass-radius` combines a Paper 5 topology question with Paper 3 omega inputs and Paper 1 dark-matter framing.
-- Its omega quantities `Z_omega`, `M_omega^2`, `g_omegaB`, and `D_00(0,q)`, plus the Fierz pinning `G_omega=-G/N`, await scope-separated migration and independent review under P5-OMEGA-01.
+- The legacy `topo-mass-radius` route combined Paper 5 topology with Paper 3 omega inputs and Paper 1 dark-matter framing. Its omega quantities and Fierz pinning have since been scope-separated into `zetacheng/3-vector-sector`; Paper 5 retains cross-repository references only under P5-OMEGA-01.
 - `legacy-kappa/wrinkle-bound-excitation` combines Paper 4 interface and Paper 1 excitation/DM framing.
-- Paper 5 v0.22 source is imported; its figures and bibliography remain unavailable.
+- Paper 5 v0.23 source is imported alongside v0.22; its figures and bibliography remain unavailable.
 - Independent Claude review and PI acceptance are complete for the authoritative C2a and separable Goldstone-Wilczek records.
 
 ## Migration assessment
@@ -71,6 +70,6 @@ Ruff-plus-pytest check all passed. GitHub CI remains configured to run the same 
 - Separable Goldstone-Wilczek record: complete.
 - Independent review: complete.
 - PI acceptance: complete.
-- Latest Paper 5 v0.22 source: present.
+- Latest Paper 5 v0.23 source: present.
 - Figures and bibliography: pending.
 - Mixed-ownership `topo-mass-radius` and `wrinkle-bound-excitation`: intentionally not imported and still require separate ownership review.
