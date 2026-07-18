@@ -1,0 +1,125 @@
+======================================================================
+TOPOLOGICAL MASS/RADIUS GATE — PASTE-READY VERDICT
+======================================================================
+Full nonlocal omega kernel. Inputs synchronized from ONE fermion loop (4-ball,
+Lambda=1): f^2 (chiral two-point), kappa_U=-17/(1152 pi^2) (pinned, NEGATIVE),
+omega D_00 from the omega-dynamization branch, c_GW=1 (GW anchor).
+Derivation: derivation/topological_mass_radius.md
+Solver: scripts/topological_mass_radius.py  Cross-check: scripts/topo_crosscheck.py
+Raw: results/topo_output.txt, results/topo_crosscheck_output.txt
+CSV: results/topo_scan.csv, topo_ER_curve.csv, topo_profile_F2.csv
+
+(1) CONVENTION & UNIT SUMMARY
+    Embedded SU(2) hedgehog U=diag(exp[iF x^.tau],1), F(0)=pi, F(inf)=0, unit
+    winding. Euclidean sharp 4-ball |p|<Lambda; Lambda the single scale; lengths
+    as R*Lambda, energies as E/Lambda. Nc=3, Nf=2, N_mult=Nc Tr_f[Q_V^2]=6.
+    E_2=(f^2/4)Int Tr(dU^dag dU); E_4=kappa_U*(Skyrme op); E_omega full nonlocal.
+
+(2) LOCKED INPUT PARAMETERS (per m/Lambda; g0=G/N free/scanned)
+    kappa_U = -17/(1152 pi^2) = -0.0014952 (NEGATIVE, m/Lambda-independent)
+    f^2(m)  : 0.00275, 0.00485, 0.00698, 0.01078  for m=0.10,0.15,0.20,0.30
+              [f^2=(Nc m^2/4pi^2)(ln((L^2+m^2)/m^2)-L^2/(L^2+m^2)); direct-4-ball
+               MC vs closed form agree to <1.2e-3 — cross-check [1]]
+    Z_omega : 0.2333, 0.1922, 0.1631, 0.1220 ; g_omegaB=c_GW/sqrt(Z_omega)!=0
+    M_omega^2=1/(g0 Z_omega) ; c_GW=1 (reproduced). INPUTS SYNCHRONIZED (one loop).
+
+(3) B=1 NORMALIZATION RESIDUAL
+    B = 4pi Int r^2 B^0 dr = 0.99999999994  (residual 6.3e-11 < 1e-8)  PASS.
+    B^0=(4/pi^2)R^3/(r^2+R^2)^3, B~(q)=(1+qR)e^{-qR}; monotone F'<=0; regular at 0.
+
+(4) TRIAL-PROFILE RESULTS (Method A; m=0.20, g0=20, full kernel)
+    F1=2 arctan(R^2/r^2): argmin R*Lam=0.05, collapse=True
+    F2=2 arctan(R/r):     argmin R*Lam=0.05, collapse=True
+    F3=2 arctan((R/r)^p): argmin R*Lam=0.05, collapse=True   (spread 0.00)
+    All families run to small R (no interior minimum).
+
+(5) FULL VARIATIONAL RESULT (Method B; independent real-space E(R) scan + relaxation)
+    E_tot(R) monotone: R=10->+4.04, R=1.4->+0.58, R=0.49->+0.19, R=0.06->-0.63.
+    argmin at smallest R; interior minimum = False => runaway collapse.
+    Coord-space E_omega = momentum-space to 5.3e-4 (both>0) — kernel validated.
+
+(6) SCALES (representative m=0.20, g0=20; most-favorable LOCAL estimate)
+    R_star Lambda = 1.58   (local/heavy-omega Derrick est.; full kernel: collapse)
+    R_star/a ~ R_star Lambda = 1.58 (a~1/Lambda)
+    m_dyn R_star = 0.315 ;  M_omega R_star = 0.87  (<1: full nonlocal kernel ESSENTIAL,
+                                                    local 6th-order approximation INVALID)
+    q_core/Lambda ~ 1/(R_star Lambda) = 0.63  (>0.2 => NOT continuum)
+
+(7) MASS DECOMPOSITION (at the local-estimate radius; representative)
+    M_2 = +0.6499   M_4 = -0.0281   M_omega = +0.0415   M_topo = +0.6633
+    (E_4<0 does NOT make the mass negative; vacuum U=1 has E=0.)
+
+(8) DIMENSIONLESS MASS
+    M_topo/Lambda = 0.663   M_topo/m_dyn = 3.32   M_topo R_star = 1.05
+    No physical Lambda fixed => M_phys = (M_topo/Lambda) * Lambda_phys (scaling only).
+
+(9) LOWEST FLUCTUATION EIGENVALUES
+    Scale/radius Hessian d^2E/dR^2 at the full-kernel configuration: UNDEFINED —
+    there is NO interior stationary point (energy monotone to R->0). The scale
+    (breathing) mode is UNSTABLE (dE/dR<0 all the way in) => lambda_min^fluct < 0
+    in the continuum. (A shallow local-approx minimum exists only under the invalid
+    M_omega R>>1 assumption.)
+
+(10) REGULATOR / GRID / METHOD SYSTEMATICS
+    E_omega qmax/grid converged (nq=1500..6000 identical to 5 digits).
+    f^2 direct-MC vs closed <1.2e-3; B residual 6e-11; coord vs mom E_omega 5e-4;
+    Method A (3 families) and Method B (real-space scan) agree: collapse.
+    Regulator sensitivity: PV-band-clipped kernel -> collapse; naive heavy-LOCAL
+    C/R^3 -> shallow min at R*Lam~1.6 (but M_omega R*<1 => that approx invalid).
+    The minimum thus TRACKS the regulator/approximation at the cutoff scale.
+
+(11) PARAMETER-SCAN TABLE (local-est R*Lam / M_omega R* / Mtopo/Lam / full kernel)
+    m     g0     R*Lam(loc)  M_om R*   Mtopo/Lam   full-kernel
+    0.10  5..400  1.37->4.24  1.27->0.44  0.21->0.70  COLLAPSE (all)
+    0.15  5..400  1.20->3.68  1.23->0.42  0.33->1.08  COLLAPSE (all)
+    0.20  5..400  1.10->3.36  1.22->0.42  0.44->1.41  COLLAPSE (all)
+    0.30  5..400  0.99->3.02  1.27->0.43  0.61->1.97  COLLAPSE (all)
+    => local R*Lam stays O(1) (<=3.4 even at g0=400); M_omega R*<1 throughout;
+       full kernel collapses at EVERY point. No g0 opens a continuum window;
+       no g0_crit exists. (Sign-robust; see below.)
+
+(12) REGRESSIONS
+    omega OFF (g_omegaB=0): E2+E4=AR-|B|/R collapses monotone to R->0 (negative
+      kappa_U is Derrick-UNSTABLE). Independently confirmed in cross-check [5].
+    quartic OFF (kappa_U=0)+local omega: E2+C/R^3 has a Derrick minimum at
+      R*Lam=1.59, E>0 (positive-E2+omega). EXPECTED.
+    local-omega limit D00->1/M_omega^2: E(R)=AR-|B|/R+C/R^3, A=0.41,|B|=0.044,
+      C>0; min R*Lam=1.58 — but M_omega R*=0.87<1 so this limit does NOT apply;
+      the full kernel (correct) collapses. Discrepancy = measure of local-approx
+      invalidity.
+    sign-flip D00->-D00: E_omega<0, adds to collapse (destabilizes). Code-sign OK.
+
+(13) PRE-REGISTERED VERDICT LINE
+    +------------------------------------------------------------------+
+    |  MASS/RADIUS GATE FAILS: MINIMUM IS A CUTOFF-SCALE LATTICE LUMP.  |
+    +------------------------------------------------------------------+
+    Basis: even the most-favorable (local) estimate gives R_star Lambda=1.58 < 3,
+    AND the full nonlocal kernel gives runaway collapse (no interior minimum;
+    minimum tracks the cutoff/regulator); M_omega R_star = 0.87 < 1 so the local
+    sixth-order stabilization is INVALID. A stable CONTINUUM topological object is
+    NOT established. This supersedes the earlier E(R)=AR-|B|/R+C/R^3 assembly,
+    which implicitly (and here demonstrably wrongly) assumed M_omega R_star >> 1.
+
+(14) ONE-SENTENCE DARK-MATTER STATEMENT
+    What IS established: with synchronized first-principles inputs the model's
+    negative quartic drives Derrick collapse and the dynamical omega — whose
+    repulsion saturates below the cutoff length — cannot arrest it at a
+    continuum-controlled radius, so any topological lump sits at the cutoff scale;
+    what is NOT established: a continuum, cutoff-independent, stable massive
+    topological object, and therefore NOTHING about cosmological dark matter
+    (abundance, coldness, halos, SPARC/RAR/BTFR, lensing, CMB) — those gates are
+    NOT opened.
+
+----------------------------------------------------------------------
+SIGN-ROBUST vs PARAMETER-DEPENDENT
+  Sign-robust (hold for all g0>0, any O(1) operator-normalization kc):
+    - B=1; negative kappa_U => Derrick collapse without a super-1/R stabilizer;
+    - omega repulsion is bounded/saturating below 1/Lambda (D_00>0 but finite);
+    - all intrinsic scales are O(Lambda) (no hierarchy) => R_star Lambda ~ O(1);
+    - => cutoff-scale lump / no continuum soliton. NO g0 opens a continuum window.
+  Representative operating point: m=0.20, g0=20 (numbers above).
+  Parameter-dependent: the precise local-estimate R_star Lambda (1.0..4.2 over the
+    scan) and M_topo/Lambda (0.21..1.97) — all still cutoff-scale, none continuum.
+SCOPE STOP: verdict emitted; no relic abundance, formation, halo, SPARC/RAR/BTFR,
+  lensing, CMB, cosmology, or paper .tex edits performed.
+======================================================================
