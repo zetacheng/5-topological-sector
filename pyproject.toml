@@ -28,8 +28,10 @@ testpaths = ["tests"]
 [tool.ruff]
 target-version = "py311"
 line-length = 100
+extend-exclude = ["archive"]
 
 [tool.ruff.lint.per-file-ignores]
 "scripts/c2a/*.py" = ["E401", "E402", "E701", "E702", "E741", "F541", "F841"]
 "scripts/common/euclidean_gamma.py" = ["E701", "E702"]
 "scripts/goldstone_wilczek/c_gw_loop.py" = ["E702"]
+"scripts/p5_omega/*.py" = ["E401", "E402", "E701", "E702", "E703", "E731", "F401", "F541", "F841"]
