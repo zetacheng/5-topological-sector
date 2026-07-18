@@ -311,3 +311,33 @@ P5-OMEGA-01.
 ### Related branch and files
 
 `gate/p5-omega-01-verdict`; `GATES.md`, `CLAIMS.md`, `HANDOFF.md`, and the migrated record.
+
+## 2026-07-18 — Disclose the P5-CL-008 narrowing
+
+### Decision
+
+Restate P5-CL-008 from “A stable continuum topological matter solution exists” to “Within the tested one-loop EFT with the verified negative quartic coefficient and endogenous nonlocal omega kernel, a stable continuum (B=1) topological soliton exists,” concurrent with marking it `FAILED`.
+
+### Reason
+
+The original claim was broader than the gate tested. The gate fails the continuum-within-EFT proposition specifically; the scoped wording makes the claim text and its `FAILED` status agree without implying that the full theory has no baryon.
+
+### Evidence
+
+`reviews/claude/2026-07-16-p5-omega-01.md`, especially its Scope paragraph.
+
+### Consequences
+
+This is a narrowing, recorded so it is not mistaken for a silent softening of a failed claim. The reviewer accepted it on that basis. The accepted claim wording is unchanged by this entry.
+
+### Supersedes
+
+The prior broader wording of P5-CL-008 only.
+
+### Related gate
+
+P5-OMEGA-01.
+
+### Related branch and files
+
+`gate/p5-omega-01-verdict`; `CLAIMS.md` and `reviews/claude/2026-07-16-p5-omega-01.md`.
