@@ -2,7 +2,7 @@
 
 ## Current task
 
-C2a and Goldstone-Wilczek gates closed, independently reviewed, and accepted.
+P5-OMEGA-01 historical gate migration is complete on a review branch; the negative continuum-stabilization verdict awaits post-migration review and PI merge decision.
 
 ## Status separation
 
@@ -14,7 +14,12 @@ C2a and Goldstone-Wilczek gates closed, independently reviewed, and accepted.
 
 ## Next scientific item
 
-Scope-separated omega migration under P5-OMEGA-01.
+1. Independent reviewer re-verifies this migration branch.
+2. PI accepts and merges the gate record.
+3. Paper 5 v0.24 paper-text synchronization.
+4. Paper 3 minimal tense/status update.
+5. Paper 1 governance-branch correction before merge.
+6. Programme register synchronization after owning-repository merge.
 
 ## Scientific question
 

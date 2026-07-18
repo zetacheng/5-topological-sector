@@ -1,0 +1,20 @@
+# Environment record
+
+## Legacy environment
+
+Legacy environment: not fully recorded in the source branch.
+
+## Destination verification environment
+
+Windows-11-10.0.26200-SP0; Python 3.12.10; NumPy 2.5.1; pytest 9.1.1;
+Ruff 0.15.22. Collected with:
+
+```text
+.venv\\Scripts\\python.exe -c "import platform,sys,numpy,pytest; ..."
+.venv\\Scripts\\ruff.exe --version
+```
+
+## Independent reviewer environment
+
+PI-supplied reviewer metadata: Linux; Python 3.12.3; NumPy 2.4.4. This is not
+the Codex verification environment.

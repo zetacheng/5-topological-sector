@@ -281,3 +281,63 @@ P3-FIERZ-01 (companion repository); P5-OMEGA-01 (Paper 5 topological-stabilizati
 ### Related branch and files
 
 `paper/v0.23`; `paper/paper5_internal_dimension_v0_23.tex`, `CLAIMS.md`, `GATES.md`, and `MIGRATION.md`.
+
+## 2026-07-18 — Migrate and close P5-OMEGA-01 as failed
+
+### Decision
+
+Migrate P5-OMEGA-01 from pinned legacy SHA `6a20b05e0899a878fde214c44cf77a8610d7516f`, preserve immutable evidence, land the reviewer transcript, close the stabilization gate as `FAIL`, and move precisely scoped P5-CL-008 to `FAILED`.
+
+### Reason
+
+The full nonlocal omega mass/radius gate had already run and failed; the owning repository required a durable, scope-separated record.
+
+### Evidence
+
+`results/p5-omega-01/`; `derivations/p5-omega-01/`; `reviews/claude/2026-07-16-p5-omega-01.md`; programme synchronization record `0-programme/reviews/PROG-SYNC-01.md`.
+
+### Consequences
+
+No omega health result is retracted and no claim is promoted to `VERIFIED`. A cutoff-scale lattice baryon remains untested. Paper 5 v0.24 text synchronization remains pending; Paper 3 needs a one-sentence downstream-status update; Paper 1’s unmerged governance branch must withdraw the failed route as a live continuum direction.
+
+### Supersedes
+
+Only the v0.22/v0.23 phrase “continuum-radius gate open”; not the verified Paper 3 omega-health results.
+
+### Related gate
+
+P5-OMEGA-01.
+
+### Related branch and files
+
+`gate/p5-omega-01-verdict`; `GATES.md`, `CLAIMS.md`, `HANDOFF.md`, and the migrated record.
+
+## 2026-07-18 — Disclose the P5-CL-008 narrowing
+
+### Decision
+
+Restate P5-CL-008 from “A stable continuum topological matter solution exists” to “Within the tested one-loop EFT with the verified negative quartic coefficient and endogenous nonlocal omega kernel, a stable continuum (B=1) topological soliton exists,” concurrent with marking it `FAILED`.
+
+### Reason
+
+The original claim was broader than the gate tested. The gate fails the continuum-within-EFT proposition specifically; the scoped wording makes the claim text and its `FAILED` status agree without implying that the full theory has no baryon.
+
+### Evidence
+
+`reviews/claude/2026-07-16-p5-omega-01.md`, especially its Scope paragraph.
+
+### Consequences
+
+This is a narrowing, recorded so it is not mistaken for a silent softening of a failed claim. The reviewer accepted it on that basis. The accepted claim wording is unchanged by this entry.
+
+### Supersedes
+
+The prior broader wording of P5-CL-008 only.
+
+### Related gate
+
+P5-OMEGA-01.
+
+### Related branch and files
+
+`gate/p5-omega-01-verdict`; `CLAIMS.md` and `reviews/claude/2026-07-16-p5-omega-01.md`.

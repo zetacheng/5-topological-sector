@@ -251,81 +251,91 @@ Source commit `4a0de1e2d6875f0ac27907395b3fc28b6bd7ce25`, finalized at `cba89de4
 
 2026-07-13 (legacy record).
 
-## P5-OMEGA-01 — Scope-separated omega-channel health gate
+## P5-OMEGA-01 — Nonlocal omega continuum-stabilization gate
 
-Status: PROPOSED
+Status: FAIL
 
 ### Scientific question
 
-Do the four omega health gates survive scope-separated re-derivation?
+Does the verified negative quartic sector, supplemented by the healthy endogenous nonlocal omega kernel supplied by Paper 3, produce a stable continuum (B=1) topological solution with radius parametrically above the cutoff scale?
 
 ### Scope
 
-Paper 5-facing checks of `Z_omega`, `M_omega^2`, `g_omegaB`, and `D_00`, together with the upstream Fierz pinning `G_omega=-G/N`. Paper 1 dark-matter framing and Paper 3 vector-sector authority are excluded.
+The migrated mass/radius functional, F1/F2/F3 profiles, finite EFT momentum band, `eft` regulator, scanned and asymptotic coupling analysis, and the continuum-window criterion. Excludes a cutoff-scale lattice baryon, formation/abundance/halo phenomenology, Paper 4 interface/wrinkle physics, and alternative untested stabilization mechanisms.
 
 ### Locked assumptions
 
-None locked. PI scope separation and applicable conventions are required before specification.
+Accepted Paper 3 inputs—not outcomes of this gate—are `G_omega=-G/N`, `Z_omega>0`, `M_omega^2>0`, nonzero Goldstone-Wilczek coupling, and a positive static repulsive kernel. Source: `zetacheng/3-vector-sector@0cb95fe7052a675708999d44f66084e446a3d0bf`, P3-FIERZ-01, P3-VEC-O1/O2/O3, and P3-OMEGA-01.
 
 ### Inputs
 
-Paper 5 v0.23 and the scope-separated companion records in `zetacheng/3-vector-sector` as cross-repository references only. No omega production artifacts are imported into this repository.
+Pinned legacy record `zetacheng/kappa-c2a@6a20b05e0899a878fde214c44cf77a8610d7516f`; `kappa_U<0`; finite EFT cutoff; `c_GW=1`.
 
-### Cross-repository caveats
+### Coupling caveats
 
-The four health gates hold for any `g0 > 0` and are coupling-independent. The below-threshold pole requires `g0 > 1/(4 m_f^2 Z_omega) ~ 10.6`; the artifact value `g0 = 20` is representative, not derived from `G/N`. At that coupling, `m_omega ~ 1.4 m_f`, not `m_f << m_omega << Lambda`.
+The four omega health conditions hold for any `g0>0`. The below-threshold pole requires `g0 > g0_thr = 1/(4 m^2 Z_omega)`, approximately `10.58` at the recorded operating point. `g0=20` is representative, not derived from `G/N`; these caveats do not rescue this stabilization gate.
 
 ### Analytic anchors
 
-The separable `c_GW=1` result at P5-GW-01 is the only supported upstream anchor in this repository; it does not establish the omega health claims.
+`kappa_U<0`; `E4 ~ -|B|/R`; finite EFT momentum band; `Btilde(q)->1` as `R->0`; screened large-coupling `D00`; and bounded omega energy in the implemented EFT band.
 
 ### Regression anchors
 
-None registered.
+`tests/test_p5_omega_01.py`: independent `f2_chiral` formula, small-radius omega saturation, large-`g0` screening/bound, collapse ordering, and `scan_R` verdict.
 
 ### Kill criterion
 
-The continuum nonlocal radius scan must give `R_star >> a` with `E''(R_star) > 0`; a cutoff-scale minimum is a lattice lump, not continuum topological matter.
+A passing continuum solution requires `R_star >> a` and `E''(R_star)>0`. The pre-registered criterion fired: the result runs to the smallest tested radius.
 
 ### Required computations
 
-Scope-separated re-derivation of the Fierz pinning, induced kinetic coefficient, mass, topological-current coupling, static kernel, and full nonlocal radius scan.
+Reproduce the adapted solver and independent crosscheck without writing immutable raw evidence.
 
 ### Required deliverables
 
-Committed derivation notes, locked conventions, scripts, tests, regression anchors, immutable outputs, provenance, and an independent review verdict.
+Pinned derivation, archived scripts, adapted runtime, immutable outputs, provenance, regression tests, and independent review record.
 
 ### Result
 
-Not run in this repository.
+MASS/RADIUS GATE FAILS: MINIMUM IS A CUTOFF-SCALE LATTICE LUMP.
+
+No continuum minimum occurs in the tested one-loop EFT setup; no `g0_crit` occurs within the implemented screened kernel; a cutoff-scale microscopic object is not adjudicated. Legacy diagnostics: `interior=False`; `collapse=True`; `M_omega R_star=0.87<1`; `q_core/Lambda=0.63`.
 
 ### Reviewer verdict
 
-PENDING
+FAIL — independently reproduced and accepted by Claude on 2026-07-16. See `reviews/claude/2026-07-16-p5-omega-01.md`.
+
+### PI acceptance
+
+PENDING — branch awaiting post-migration reviewer verification and PI merge decision.
+
+### Claim-promotion status
+
+FAILED claim recorded; no positive claim promoted.
 
 ### Consequences
 
-P5-CL-009 through P5-CL-013 remain `PROPOSED` in this repository. The companion paper owns the omega existence, health, and repulsive-kernel claims; Paper 5 retains the topological-stabilization question and its continuum-radius kill criterion.
+P5-CL-008 is failed only in the stated continuum-EFT scope. P5-CL-009 through P5-CL-013 remain `PROPOSED`; the stabilization failure does not retract Paper 3 omega-health results.
 
 ### Repository branch
 
-Future `gate/p5-omega-01` branch after PI scope approval.
+`gate/p5-omega-01-verdict`.
 
 ### Relevant files
 
-`paper/paper5_internal_dimension_v0_23.tex`; `CLAIMS.md`; `MIGRATION.md`.
+`derivations/p5-omega-01/topological_mass_radius.md`; `scripts/p5_omega/`; `archive/p5-omega-01/source/`; `results/p5-omega-01/`; `reviews/claude/2026-07-16-p5-omega-01.md`; `tests/test_p5_omega_01.py`.
 
 ### Migration provenance
 
-Scope-separated companion migration in `zetacheng/3-vector-sector`: P3-FIERZ-01, P3-VEC-O1/O2/O3, and P3-OMEGA-01. Paper 5 retains references only.
+Pinned legacy source `6a20b05e0899a878fde214c44cf77a8610d7516f`; destination migration date 2026-07-18.
 
 ### Date opened
 
-2026-07-16
+2026-07-14 (legacy record).
 
 ### Date closed
 
-Open.
+2026-07-14 (original negative result; migrated 2026-07-18).
 ## P5-C2A-04 — Regulator and PV sign confirmation
 
 Status: PASS
