@@ -82,8 +82,11 @@ Ruff-plus-pytest check all passed. GitHub CI remains configured to run the same 
 - Source: `zetacheng/kappa-c2a@6a20b05e0899a878fde214c44cf77a8610d7516f`.
 - Imported only: `derivation/topological_mass_radius.md`, the two listed
   scripts, and the six listed `topo_*` result artifacts.
-- Immutable raw checksums, complete inventory, and source/destination equality
-  are in `results/p5-omega-01/PROVENANCE.md`.
+- Raw artifacts are content-identical to the pinned source. The three CSVs
+  were line-ending normalized CRLF-to-LF in destination Git objects, so their
+  byte-level hashes differ from the legacy blobs while normalized hashes match;
+  the three `.txt` files are byte-identical. Details are in
+  `results/p5-omega-01/PROVENANCE.md`.
 - Immutable archival scripts: `archive/p5-omega-01/source/`.
 - Destination-adapted modules: `scripts/p5_omega/`; intentional packaging and
   output-path changes only are listed in `archive/p5-omega-01/ADAPTATION_DIFF.md`.
