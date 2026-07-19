@@ -2,7 +2,7 @@
 
 ## Current task
 
-P5-OMEGA-01 historical gate migration is complete on a review branch; the negative continuum-stabilization verdict awaits post-migration review and PI merge decision.
+The `P5-OMEGA-01` gate record is merged as `FAILED`, and Paper 5 v0.24 synchronizes the paper text with that verdict (`PROG-SYNC-01`, Paper 5 side).
 
 ## Status separation
 
@@ -14,12 +14,11 @@ P5-OMEGA-01 historical gate migration is complete on a review branch; the negati
 
 ## Next scientific item
 
-1. Independent reviewer re-verifies this migration branch.
-2. PI accepts and merges the gate record.
-3. Paper 5 v0.24 paper-text synchronization.
-4. Paper 3 minimal tense/status update.
-5. Paper 1 governance-branch correction before merge.
-6. Programme register synchronization after owning-repository merge.
+The Paper 5 side of the `PROG-SYNC-01` synchronization is complete: v0.24 is imported, and the paper text now states the `P5-OMEGA-01` continuum-radius gate as run-and-failed, consistent with `P5-CL-008` `FAILED`. The remaining programme edits are outside this repository:
+
+1. Paper 3 minimal tense/status update.
+2. Paper 1 governance-branch correction before merge.
+3. Programme register synchronization after the owning-repository merges.
 
 ## Scientific question
 

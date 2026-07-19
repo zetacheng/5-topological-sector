@@ -6,7 +6,7 @@ Paper 5 — Topological Sector of the Lattice Fermion Condensate (`5-topological
 
 ## Current version
 
-v0.23, imported as `paper/paper5_internal_dimension_v0_23.tex` from the PI-supplied source; v0.22 is retained alongside it.
+v0.24, imported as `paper/paper5_internal_dimension_v0_24.tex` from the PI-supplied source; v0.22 and v0.23 are retained alongside it.
 
 ## Current scientific status
 
@@ -54,4 +54,4 @@ Begin scope-separated omega migration under P5-OMEGA-01 after PI scope approval.
 
 ## Last updated
 
-2026-07-16
+2026-07-18

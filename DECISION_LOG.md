@@ -341,3 +341,33 @@ P5-OMEGA-01.
 ### Related branch and files
 
 `gate/p5-omega-01-verdict`; `CLAIMS.md` and `reviews/claude/2026-07-16-p5-omega-01.md`.
+
+## 2026-07-18 — Import Paper 5 v0.24 synchronizing the failed continuum gate
+
+### Decision
+
+Import `paper/paper5_internal_dimension_v0_24.tex` alongside v0.22 and v0.23. The v0.24 source replaces the v0.23 description of the continuum-radius gate as *open* with a run-and-failed statement in all six places: the two abstract mentions, the in-body decisive-gate paragraph (cutoff-scale collapse, `M_omega R_star = 0.87`, `q_core/Lambda ~ 0.63`, structural collapse), the two Gate-3 (Skyrme/WZW) re-scope clauses, and a v0.24 changelog note in the status block recording `P5-OMEGA-01` `FAILED` and `P5-CL-008` `FAILED`.
+
+### Reason
+
+`P5-OMEGA-01` is `FAILED` and merged, with `P5-CL-008` marked `FAILED`. The paper prose still described the continuum-radius gate as open, contradicting the ledger. v0.24 makes the paper text consistent with the recorded verdict, the synchronization that `PROG-SYNC-01` and the `P5-CL-008` decision-log entry anticipated.
+
+### Evidence
+
+`0-programme/reviews/PROG-SYNC-01.md`; `reviews/claude/2026-07-16-p5-omega-01.md`; the merged `P5-OMEGA-01` gate record and the `P5-CL-008` `FAILED` row in `CLAIMS.md`.
+
+### Consequences
+
+Documentation only; no script, test, result, or number changed. Earlier versions (v0.22, v0.23) are retained unchanged as the historical record.
+
+### Supersedes
+
+The v0.23 paper text's description of the continuum-radius gate as open. No claim status is altered by this entry.
+
+### Related gate
+
+P5-OMEGA-01; P5-CL-008.
+
+### Related branch and files
+
+`paper/v0.24`; `paper/paper5_internal_dimension_v0_24.tex`, `PROGRESS.md`, `CLAIMS.md`, `HANDOFF.md`, `DECISION_LOG.md`.
